@@ -15,8 +15,8 @@ from openai import OpenAI
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
-from models import SanctionedIndividual, IndividualsList, SanctionedEntity, EntitiesList
-from logger_config import pipeline_logger
+from src.models import SanctionedIndividual, IndividualsList, SanctionedEntity, EntitiesList
+from src.logger_config import pipeline_logger
 
 
 # Load environment variables

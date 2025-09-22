@@ -4,9 +4,9 @@ This orchestrates the multi-step process to convert unstructured PDF data
 into structured Neo4j graph database format.
 """
 
-from pdf_to_text import process_sanctions_pdf
-from llm_extractor import process_sanctions_with_llm
-from logger_config import pipeline_logger
+from src.pdf_to_text import process_sanctions_pdf
+from src.llm_extractor import process_sanctions_with_llm
+from src.logger_config import pipeline_logger
 
 
 def main():

@@ -8,7 +8,7 @@ import pdfplumber
 import os
 from pathlib import Path
 from typing import Optional
-from logger_config import pipeline_logger
+from src.logger_config import pipeline_logger
 
 
 def extract_text_from_pdf(pdf_path: str, output_dir: str = "output") -> Optional[str]:
