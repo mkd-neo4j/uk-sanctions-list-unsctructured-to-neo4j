@@ -4,6 +4,9 @@ This orchestrates the multi-step process to convert unstructured PDF data
 into structured Neo4j graph database format.
 """
 
+import os
+from dotenv import load_dotenv
+
 from src.pdf_to_text import process_sanctions_pdf
 from src.llm_extractor import process_sanctions_with_llm
 from src.logger_config import pipeline_logger
@@ -20,6 +23,9 @@ def main():
     4. Neo4j loading (to be implemented)
     """
     try:
+        # Load environment variables
+        load_dotenv()
+
         # Initialize pipeline with professional logging
         pipeline_logger.pipeline_start("UK Sanctions List Processing Pipeline")
         pipeline_logger.info("🔄 Initializing AI-powered sanctions data extraction system")
@@ -41,7 +47,8 @@ def main():
         })
 
         # Step 2: LLM Parsing and Structured Extraction
-        pipeline_logger.step_start("LLM Structured Extraction", "Processing text with OpenAI GPT-4o-mini for structured data extraction")
+        model_name = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+        pipeline_logger.step_start("LLM Structured Extraction", f"Processing text with OpenAI {model_name} for structured data extraction")
 
         try:
             individuals, entities = process_sanctions_with_llm()
