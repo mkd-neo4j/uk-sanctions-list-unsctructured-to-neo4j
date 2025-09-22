@@ -1,7 +1,7 @@
 # 🕸️ UK Sanctions Knowledge Graph: From Unstructured PDFs to Neo4j
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-green)](https://openai.com/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--5--Nano-green)](https://openai.com/)
 [![Neo4j](https://img.shields.io/badge/Neo4j-Graph%20Database-orange)](https://neo4j.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
