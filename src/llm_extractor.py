@@ -549,7 +549,7 @@ class LLMExtractor:
         Returns:
             Tuple of (IndividualsList, EntitiesList)
         """
-        # individuals = self.extract_individuals(text)
+        individuals = self.extract_individuals(text)
         entities = self.extract_entities(text)
         return individuals, entities
 
