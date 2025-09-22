@@ -383,6 +383,9 @@ class LLMExtractor:
 
         pipeline_logger.info(f"🏢 Starting LLM extraction for {len(entity_texts)} entities")
 
+        # Initialize output files for incremental saving
+        self._initialize_output_files()
+
         system_prompt = """You are a data extraction specialist for UK sanctions lists.
         Extract the ENTITY/ORGANIZATION from the provided text record. This text contains exactly ONE entity record.
 
@@ -442,8 +445,8 @@ class LLMExtractor:
                         {"role": "user", "content": user_prompt}
                     ],
                     response_format=EntitiesList,
-                    temperature=0,  # Use deterministic output
-                    max_tokens=16000
+                    # temperature=0,  # Use deterministic output
+                    # max_tokens=16000
                 )
 
                 # Track API usage
@@ -546,7 +549,7 @@ class LLMExtractor:
         Returns:
             Tuple of (IndividualsList, EntitiesList)
         """
-        individuals = self.extract_individuals(text)
+        # individuals = self.extract_individuals(text)
         entities = self.extract_entities(text)
         return individuals, entities
 

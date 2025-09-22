@@ -24,10 +24,6 @@ class Address(BaseModel):
     region: Optional[str] = Field(None, description="State, province, county, or administrative region")
     country: Optional[str] = Field(None, description="Country name")
 
-    # Optional geographic coordinates (rarely available in sanctions data)
-    latitude: Optional[float] = Field(None, description="Geographic latitude coordinate")
-    longitude: Optional[float] = Field(None, description="Geographic longitude coordinate")
-
     class Config:
         json_schema_extra = {
             "examples": [

@@ -1,0 +1,306 @@
+[
+  {
+    "sanctionId": "CYB0097-16991",
+    "ukSanctionsRef": "CYB0097",
+    "organizationName": "161ST SPECIALIST TRAINING CENTRE (TSPS)",
+    "nameNonLatinScript": null,
+    "aliases": [
+      "GRU Unit 29155"
+    ],
+    "entityType": "MILITARY",
+    "typeOfEntity": "Training Centre",
+    "address": null,
+    "registrationNumber": null,
+    "parentCompany": null,
+    "subsidiaries": [],
+    "groupId": "16991",
+    "listedOn": "18/07/2025",
+    "dateDesignated": "18/07/2025",
+    "lastUpdated": "18/07/2025",
+    "statementOfReasons": "The 161st Specialist Training Centre (TsPS) (Unit 29155) of the Russian General Staff of the Armed Forces of the Russian Federation (GRU), is involved in relevant cyber acitivty in that it has been responsible for, engaging in, providing support for, or promoting the commission, planning or preparation or relevant cyber acitivty, including information system and data interference such as hacking and leaking of sensitive information, defacement of websites, espionage through the collection of data, and sabotage through the destruction of data, including by deploying WhisperGate malware. These activities undermine, or are intended to undermine, the integrity, prosperity or security of the United Kingdom or a country other than the United Kingdom.",
+    "otherInformation": "(UK Sanctions List Ref):CYB0097. (UK Statement of Reasons):The 161st Specialist Training Centre (TsPS) (Unit 29155) of the Russian General Staff of the Armed Forces of the Russian Federation (GRU), is involved in relevant cyber acitivty in that it has been responsible for, engaging in, providing support for, or promoting the commission, planning or preparation or relevant cyber acitivty, including information system and data interference such as hacking and leaking of sensitive information, defacement of websites, espionage through the collection of data, and sabotage through the destruction of data, including by deploying WhisperGate malware. These activities undermine, or are intended to undermine, the integrity, prosperity or security of the United Kingdom or a country other than the United Kingdom.",
+    "relatedEntities": [
+      "Advanced Persistent Threat Group 31 (APT31)",
+      "Russian General Staff of the Armed Forces of the Russian Federation (GRU)"
+    ]
+  },
+  {
+    "sanctionId": "CYB0012-13984",
+    "ukSanctionsRef": "CYB0012",
+    "organizationName": "85TH MAIN SPECIAL SERVICE CENTRE (GTSSS)",
+    "nameNonLatinScript": null,
+    "aliases": [
+      "APT28 (Advanced Persistent Threat)",
+      "FANCY BEAR",
+      "GRU Unit 26165",
+      "Iron Twilight",
+      "Pawn Storm",
+      "Sednit",
+      "Sofacy Group",
+      "STRONTIUM",
+      "Threat Group-4127/Iron Twilight",
+      "Tsar Team"
+    ],
+    "entityType": "GOVERNMENT",
+    "typeOfEntity": "Department within Government",
+    "address": {
+      "rawAddress": "Komsomol'skiy Prospekt, 20 Moscow, Russia, 119146",
+      "addressLine1": "Komsomol'skiy Prospekt, 20",
+      "addressLine2": null,
+      "postTown": "Moscow",
+      "postCode": "119146",
+      "region": null,
+      "country": "Russia",
+      "latitude": null,
+      "longitude": null
+    },
+    "registrationNumber": null,
+    "parentCompany": "Russian Ministry of Defence",
+    "subsidiaries": [],
+    "groupId": "13984",
+    "listedOn": "23/10/2020",
+    "dateDesignated": "31/12/2020",
+    "lastUpdated": "18/07/2025",
+    "statementOfReasons": "The 85th Main Special Services Centre (GTsSS) (Unit 26165) of the Russian General Staff of the Armed Forces of the Russian Federation (GRU), is involved in relevant cyber activity in that it has been responsible for, engaging in, providing support for, or promoting the commission, planning or preparation or relevant cyber activity, including the deployment of X-Agent malware. These activities undermine, or are intended to undermine, the integrity, prosperity or security of the United Kingdom or a country other than the United Kingdom. (Type of entity):Department within Government",
+    "otherInformation": "(UK Sanctions List Ref):CYB0012.",
+    "relatedEntities": [
+      "Russian General Staff of the Armed Forces (GRU)",
+      "Advanced Persistent Threat Group 28 (APT28)"
+    ]
+  },
+  {
+    "sanctionId": "CYB0022-15044",
+    "ukSanctionsRef": "CYB0022",
+    "organizationName": "CENTRAL SCIENTIFIC RESEARCH INSTITUTE OF CHEMISTRY AND MECHANICS",
+    "nameNonLatinScript": null,
+    "aliases": [
+      "GNTs RF FGUP TsNIIKhM",
+      "NIII6",
+      "Scientific Research Institute No 6",
+      "State Research Centre of the Russian Federation Federal State Unitary Enterprise Central Scientific Research Institute for Chemistry and Mechanics",
+      "TsNIIKhM"
+    ],
+    "entityType": "GOVERNMENT",
+    "typeOfEntity": "Government-owned technical research institution",
+    "address": {
+      "rawAddress": "16a Nagatinskaya Street, Moscow, Russia",
+      "addressLine1": "16a Nagatinskaya Street",
+      "addressLine2": null,
+      "postTown": "Moscow",
+      "postCode": null,
+      "region": null,
+      "country": "Russia",
+      "latitude": null,
+      "longitude": null
+    },
+    "registrationNumber": null,
+    "parentCompany": null,
+    "subsidiaries": [],
+    "groupId": "15044",
+    "listedOn": "24/03/2022",
+    "dateDesignated": "24/03/2022",
+    "lastUpdated": "24/03/2022",
+    "statementOfReasons": "The Central Scientific Research Institute of Chemistry and Mechanics (TsNIIKhM) was responsible for a cyber attack on a petro-chemical company in August 2017. The cyber attack gained remote access to the Safety Instrumented Systems connected to the Industrial Control System of a petrochemical refinery. This shut down the plant for over a week. There is evidence to suggest that the shutdown was inadvertent while TsNIIKhM were attempting to cause a highly dangerous physical consequence through disabling the safety systems, which could have included an explosion. These actions caused economic loss and prejudice to commercial interests and/or was intended to undermine the security and prosperity of a country other than the United Kingdom.",
+    "otherInformation": "(UK Sanctions List Ref):CYB0022.",
+    "relatedEntities": []
+  },
+  {
+    "sanctionId": "CYB0004-13910",
+    "ukSanctionsRef": "CYB0004",
+    "organizationName": "CHOSUN EXPO (APT 38)",
+    "nameNonLatinScript": null,
+    "aliases": [
+      "Chosen Expo",
+      "Korean Export Joint Venture"
+    ],
+    "entityType": "BUSINESS",
+    "typeOfEntity": "Company",
+    "address": {
+      "rawAddress": "North Korea",
+      "addressLine1": null,
+      "addressLine2": null,
+      "postTown": null,
+      "postCode": null,
+      "region": null,
+      "country": "North Korea",
+      "latitude": null,
+      "longitude": null
+    },
+    "registrationNumber": null,
+    "parentCompany": null,
+    "subsidiaries": [
+      "Reconnaissance General Bureau"
+    ],
+    "groupId": "13910",
+    "listedOn": "31/07/2020",
+    "dateDesignated": "31/12/2020",
+    "lastUpdated": "31/12/2020",
+    "statementOfReasons": "(UK Statement of Reasons):The Lazarus Group was responsible for relevant cyber activity that resulted in data interference which directly or indirectly caused, or is intended to cause, economic loss to, or prejudice to the commercial interests of, those affected by the activity through stealing money from Bangladesh Bank, attempting to steal money from Vietnam Tien Phong Bank and targeting the Polish Financial Conduct Authority information systems. Through the WannaCry attack they undermined the integrity of the United Kingdom through interfering with an information system so that it prevented the provision of essential healthcare services to the population.",
+    "otherInformation": "(UK Sanctions List Ref):CYB0004. (UK Statement of Reasons):The Lazarus Group was responsible for relevant cyber activity that resulted in data interference which directly or indirectly caused, or is intended to cause, economic loss to, or prejudice to the commercial interests of, those affected by the activity through stealing money from Bangladesh Bank, attempting to steal money from Vietnam Tien Phong Bank and targeting the Polish Financial Conduct Authority information systems. Through the WannaCry attack they undermined the integrity of the United Kingdom through interfering with an information system so that it prevented the provision of essential healthcare services to the population.",
+    "relatedEntities": [
+      "Lazarus Group"
+    ]
+  },
+  {
+    "sanctionId": "CYB0009-13911",
+    "ukSanctionsRef": "CYB0009",
+    "organizationName": "MAIN CENTRE FOR SPECIAL TECHNOLOGIES (GTSST) ('SANDWORM')",
+    "nameNonLatinScript": null,
+    "aliases": [
+      "BlackEnergy Group",
+      "GRU Unit 74455",
+      "Olympic Destroyer",
+      "Quedagh",
+      "Sandworm Team",
+      "Telebots",
+      "Voodoo"
+    ],
+    "entityType": "GOVERNMENT",
+    "typeOfEntity": "Department within Government/Military Unit",
+    "address": {
+      "rawAddress": "22 Kirova Street, Moscow, Russia",
+      "addressLine1": "22 Kirova Street",
+      "addressLine2": null,
+      "postTown": "Moscow",
+      "postCode": null,
+      "region": null,
+      "country": "Russia",
+      "latitude": null,
+      "longitude": null
+    },
+    "registrationNumber": null,
+    "parentCompany": "Russian Ministry of Defence",
+    "subsidiaries": [],
+    "groupId": "13911",
+    "listedOn": "31/07/2020",
+    "dateDesignated": "31/12/2020",
+    "lastUpdated": "18/07/2025",
+    "statementOfReasons": "The Main Centre for Special Technologies (GTsST) (Unit 74455) of the Russian General Staff Main Intelligence Directorate (GRU) is involved in relevant cyber activity in that it is or has been responsible for, engaging in, providing support for, or promoting the commission, planning or preparation of relevant cyber activity, including the deployment of multiple variations of Industroyer malware and NotPetya malware. These activities undermine, or are intended to undermine, the integrity, prosperity or security of the United Kingdom or a country other than the United Kingdom or directly or indirectly causes, or is intended to cause, economic loss to, or prejudice to the commercial interests of, those affected by the activity.",
+    "otherInformation": "(UK Sanctions List Ref):CYB0009.",
+    "relatedEntities": [
+      "Russian General Staff Main Intelligence Directorate (GRU)",
+      "Unit 74455"
+    ]
+  },
+  {
+    "sanctionId": "CYB0003-13909",
+    "ukSanctionsRef": "CYB0003",
+    "organizationName": "TIANJIN HUAYING HAITAI SCIENCE AND TECHNOLOGY DEVELOPMENT CO. LTD",
+    "nameNonLatinScript": null,
+    "aliases": [
+      "APT10",
+      "CVNX",
+      "Haitai Technology Development Co. Ltd",
+      "MenuPass",
+      "Potassium",
+      "Red Apollo",
+      "Stone Panda"
+    ],
+    "entityType": "BUSINESS",
+    "typeOfEntity": "Company",
+    "address": null,
+    "registrationNumber": null,
+    "parentCompany": null,
+    "subsidiaries": [],
+    "groupId": "13909",
+    "listedOn": "31/07/2020",
+    "dateDesignated": "31/12/2020",
+    "lastUpdated": "31/12/2020",
+    "statementOfReasons": "Huaying Haitai, known in cyber security circles as APT10 (Advanced Persistent Threat 10), Red Apollo, CVNX, Stone Panda, MenuPass and Potassium, was involved in relevant cyber activity Operation Cloud Hopper, one of the most significant and widespread cyber instructions to date. They conducted data interference through the theft of intellectual property and sensitive commercial data over many years. Huaying Haitai targeted companies across six continents and sectors banking and finance, government, aviation, space, and satellite technology, manufacturing technology, medical, oil and gas, mining, communications technology, computer processing technology, and defence technology. This activity undermined the prosperity of the United Kingdom and countries other than the United Kingdom",
+    "otherInformation": "(Website: huayinghaitai.com); (UK Sanctions List Ref): CYB0003",
+    "relatedEntities": []
+  },
+  {
+    "sanctionId": "CYB0044-16460",
+    "ukSanctionsRef": "CYB0044",
+    "organizationName": "WUHAN XIAORUIZHI SCIENCE AND TECHNOLOGY COMPANY LIMITED",
+    "nameNonLatinScript": "武汉晓睿智科技有限责任公司",
+    "aliases": [],
+    "entityType": "BUSINESS",
+    "typeOfEntity": "Company",
+    "address": {
+      "rawAddress": "2nd Floor, No. 16, Huashiyuan North Road, East Lake New Technology Development Zone, Hubei Province, Wuhan, China",
+      "addressLine1": "No. 16, Huashiyuan North Road",
+      "addressLine2": "2nd Floor",
+      "postTown": "Wuhan",
+      "postCode": null,
+      "region": "East Lake New Technology Development Zone, Hubei Province",
+      "country": "China",
+      "latitude": null,
+      "longitude": null
+    },
+    "registrationNumber": null,
+    "parentCompany": null,
+    "subsidiaries": [],
+    "groupId": "16460",
+    "listedOn": "25/03/2024",
+    "dateDesignated": "25/03/2024",
+    "lastUpdated": "25/03/2024",
+    "statementOfReasons": "WUHAN XIAORUIZHI SCIENCE AND TECHNOLOGY COMPANY LIMITED is associated with Advanced Persistent Threat Group 31 (APT31) and is, or has been, involved in relevant cyber activity, including being responsible for, engaging in, or providing support for the commission, planning, or preparation of relevant cyber activity on behalf of the Chinese State. This included the preparation for, and/or the provision of support to, sophisticated cyber activity, including spear-phishing campaigns and information systems interference which resulted in the unauthorised access to, and exfiltration of, sensitive data. Such campaigns included cyber activities targeting officials, government entities and parliamentarians conducted by APT31 against such individuals in the UK and internationally. As such, WUHAN XIAORUIZHI SCIENCE AND TECHNOLOGY COMPANY LIMITED, is an associated person in the activity of the APT31 group operating on behalf of the Chinese Ministry of State Security (MSS) as part of the PRC’s state-sponsored apparatus and itself has engaged in relevant cyber activity, in support of malicious cyber activity that targeted officials, government entities and parliamentarians. This action undermined, or was intended to undermine, the integrity, prosperity and security of UK and international organisations and individuals engaged in political and democratic processes. (Type of entity):Company Listed on: 25/03/2024 UK Sanctions List Date Designated: 25/03/2024 Last Updated: 25/03/2024 Group ID: 16460.",
+    "otherInformation": "(UK Sanctions List Ref):CYB0044. (UK Statement of Reasons): WUHAN XIAORUIZHI SCIENCE AND TECHNOLOGY COMPANY LIMITED is associated with APT31 and the MSS; this information is provided for context within the UK sanctions regime.",
+    "relatedEntities": [
+      "Advanced Persistent Threat Group 31 (APT31)",
+      "Chinese Ministry of State Security (MSS)"
+    ]
+  },
+  {
+    "sanctionId": "CYB0065-16747",
+    "ukSanctionsRef": "CYB0065",
+    "organizationName": "XHOST INTERNET SOLUTIONS LP",
+    "nameNonLatinScript": null,
+    "aliases": [
+      "ISXHost",
+      "XHost"
+    ],
+    "entityType": "BUSINESS",
+    "typeOfEntity": "Limited Partnership",
+    "address": null,
+    "registrationNumber": null,
+    "parentCompany": null,
+    "subsidiaries": [],
+    "groupId": "16747",
+    "listedOn": "11/02/2025",
+    "dateDesignated": "11/02/2025",
+    "lastUpdated": "11/02/2025",
+    "statementOfReasons": "XHOST INTERNET SOLUTIONS LP ('XHOST') has been involved in relevant cyber activity, in that it is owned or controlled by and is acting on behalf or at the direction of ZSERVERS, which is involved in relevant cyber activity through the provision of hosting services that support such activity. XHOST has provided support for the commission, planning or preparation of relevant cyber activity, has supplied technology that could contribute to such activity, and has carried out activities which promoted, enabled or facilitated the commission of relevant cyber activity, by providing hosting services that support such activity. Further, XHOST was established to support and obfuscate relevant cyber activity by ZSERVERS, a Russian-based provider of bulletproof hosting services. Such activity that XHOST was involved in, directly or indirectly caused, or is intended to cause, economic loss to, or prejudice to the commercial interests of, those affected by the activity.",
+    "otherInformation": "Website: isxhost.uk",
+    "relatedEntities": [
+      "ZSERVERS"
+    ]
+  },
+  {
+    "sanctionId": "CYB0064-16746",
+    "ukSanctionsRef": "CYB0064",
+    "organizationName": "ZSERVERS",
+    "nameNonLatinScript": null,
+    "aliases": [
+      "Zservers"
+    ],
+    "entityType": "BUSINESS",
+    "typeOfEntity": "Company",
+    "address": {
+      "rawAddress": "32 Jubileinaia, Barnaul, Altai Kray, Russia, 656902.",
+      "addressLine1": "32 Jubileinaia",
+      "addressLine2": null,
+      "postTown": "Barnaul",
+      "postCode": "656902",
+      "region": "Altai Kray",
+      "country": "Russia",
+      "latitude": null,
+      "longitude": null
+    },
+    "registrationNumber": null,
+    "parentCompany": null,
+    "subsidiaries": [],
+    "groupId": "16746",
+    "listedOn": "11/02/2025",
+    "dateDesignated": "11/02/2025",
+    "lastUpdated": "11/02/2025",
+    "statementOfReasons": "(UK Statement of Reasons):ZSERVERS has been involved in relevant cyber activity, in that by providing hosting services that support relevant cyber activity it has provided support for the commission, planning or preparation of such activity, has supplied technology and provided technical assistance that could contribute to such activity, and has carried out activities which promoted, enabled or facilitated the commission of relevant cyber activity. ZSERVERS has operated from Barnaul, Russia and has promoted itself as a Bulletproof Hosting (BPH) provider. ZSERVERS has been involved in relevant cyber activity though its role providing infrastructure used in ransomware incidents and reprovisioning infrastructure for customers identified as being involved in malicious cyber activity, including those affiliated with the LockBit ransomware group. ZSERVERS infrastructure was used to host a ransomware-dedicated site connected with the leak of private information stolen from Australian health insurance company Medibank Private Limited. ZSERVERS has been identified as a key enabler of the cybercrime ecosystem. Such activity that ZSERVERS was involved in, directly or indirectly caused, or was intended to cause, economic loss to, or prejudice to the commercial interests of those affected by the activity. (Website): Zservers.ru",
+    "otherInformation": "Website: Zservers.ru Listed on: 11/02/2025 UK Sanctions List Date Designated: 11/02/2025 Last Updated: 11/02/2025 Group ID: 16746.",
+    "relatedEntities": [
+      "LockBit ransomware group",
+      "Medibank Private Limited"
+    ]
+  }
+]
