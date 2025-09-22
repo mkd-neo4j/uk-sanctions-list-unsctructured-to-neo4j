@@ -1,0 +1,809 @@
+CONSOLIDATED LIST OF FINANCIAL SANCTIONS
+TARGETS IN THE UK
+Last Updated:12/08/2025
+Status: Asset Freeze Targets
+REGIME: Cyber
+INDIVIDUALS
+1. Name 6: ANANEV 1: VLADIMIR 2: VLADIMIROVICH 3: n/a 4: n/a 5: n/a.
+DOB: 03/07/1987. POB: Kyrgyzstan a.k.a: (1) DARKON (2) THEVLADAN33 Nationality: Russia Passport Number:
+766211028 Other Information: (UK Sanctions List Ref):CYB0071. (UK Statement of Reasons):Vladimir Vladimirovich ANANEV is an
+involved person through his role in and association with ZSERVERS, an involved person identified as a key enabler of the cybercrime
+ecosystem. ZSERVERS has been identified as a key enabler of the cybercrime ecosystem. As a result, Vladimir Vladimirovich ANANEV
+is therefore involved in enabling cybercrime. In this role, Vladimir Vladimirovich ANANEV was involved in activity that, directly or
+indirectly caused, or was intended to cause, economic loss to, or prejudice to the commercial interests of those affected by the activity.
+(Gender):Male Listed on: 11/02/2025 UK Sanctions List Date Designated: 11/02/2025 Last Updated: 11/02/2025 Group ID:
+16753.
+2. Name 6: BADIN 1: DMITRY 2: SERGEYEVICH 3: n/a 4: n/a 5: n/a.
+DOB: 15/11/1990. POB: Kursk Nationality: Russia Position: Military Intelligence Officer Other Information: (UK Sanctions List
+Ref):CYB0010. (UK Statement of Reasons):Dmitry Sergevey Badin took part in a cyber attack against the German Federal Parliament
+(Deutscher Bundestag) with significant effect. As a military intelligence officer of the 85th Main Centre for Special Technologies (GTsSS) of
+the Russian General Staff of the Armed Forces of the Russian Federation (GRU), Dmitry Badin was part of a team of Russian Military
+intelligence officers which conducted a cyber attack against the German federal parliament (Deutscher Bundestag) in April and May 2015.
+This cyber attack targeted the parliament’s information system and affected its operation for several days. A significant amount of data was
+stolen and the email accounts of several MPs, as well as Chancellor Angela Merkel, were affected. (Gender):Male Listed on: 23/10/2020
+UK Sanctions List Date Designated: 31/12/2020 Last Updated: 31/12/2020 Group ID: 13983.
+3. Name 6: BARANOV 1: ANDREY 2: EDUARDOVICH 3: n/a 4: n/a 5: n/a.
+Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0092. (UK Statement of Reasons):As a member of GRU Unit
+26165, Andrey Eduardovich BARANOV has been involved in relevant cyber activity in that he was responsible for, engaging in, providing
+support for, or promoting the commissioning, planning or preparation of relevant cyber activity. Such activity that Andrey Eduardovich
+BARANOV has been involved in, or is intended to undermine, the integrity, prosperity or security of the United Kingdom or a country other
+than the United Kingdom. (Gender):Male Listed on: 18/07/2025 UK Sanctions List Date Designated: 18/07/2025 Last Updated:
+18/07/2025 Group ID: 16996.
+4. Name 6: BENDERSKIY 1: EDUARD 2: VITALEVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Эдуард Витальевич БЕНДЕРСКИЙ
+DOB: 25/06/1970. a.k.a: BENDERSKIY, Eduard, Vitalyevich Other Information: (UK Sanctions List Ref):CYB0057. (UK
+Statement of Reasons):Eduard Vitalevich BENDERSKIY has been involved in relevant cyber activity, including being responsible for,
+engaging in and providing support for malicious cyber activity that resulted in the unauthorised access and exfiltration of sensitive data from
+UK infrastructure and networks. Eduard BENDERSKIY facilitated Evil Corp's connections and involvement with the Russian Intelligence
+Services and provided both political and physical protection to the group, enabling their malicious cyber operations. Evil Corp's malicious
+cyber activity involved a concerted effort to compromise UK health, government and public sector institutions, and commercial technology
+companies, for financial gain, which undermined or was intended to undermine the integrity, prosperity and security of the United Kingdom
+and its allies. (Gender):Male Listed on: 01/10/2024 UK Sanctions List Date Designated: 01/10/2024 Last Updated: 08/10/2024
+Group ID: 16584.
+5. Name 6: BOLSHAKOV 1: ALEKSANDR 2: SERGEYEVICH 3: n/a 4: n/a 5: n/a.
+
+--- Page 1 ---
+
+DOB: 23/07/1994. POB: Kazakhstan a.k.a: (1) AAELBAS (2) WTLFNT Nationality: Russia Passport Number: 756311712 Other
+Information: (UK Sanctions List Ref):CYB0066. (UK Statement of Reasons):Aleksandr Sergeyevich BOLSHAKOV is an involved
+person through his role in and association with ZSERVERS, an involved person identified as a key enabler of the cybercrime ecosystem. In
+this capacity, Aleksandr Sergeyevich BOLSHAKOV was directly involved in the supply of goods or technology that could contribute to
+relevant cyber activity, or in providing financial services relating to such supply. Aleksandr Sergeyevich BOLSHAKOV is therefore involved
+in enabling cybercrime. In this role, Aleksandr Sergeyevich BOLSHAKOV was involved in relevant cyber activity that, directly or indirectly
+caused, or was intended to cause, economic loss to, or prejudice to the commercial interests of, those affected by the activity.
+(Gender):Male Listed on: 11/02/2025 UK Sanctions List Date Designated: 11/02/2025 Last Updated: 11/02/2025 Group ID:
+16748.
+6. Name 6: BOLSHAKOV 1: DMITRY 2: KONSTANTINOVICH 3: n/a 4: n/a 5: n/a.
+DOB: 23/08/2001. POB: Altayskiy Kray, Russia a.k.a: (1) BOLSHAK_JUNIOR (2) BOLSHAKOV, Dmitriy,
+Konstantinovich (3) SERGEYVASIL Other Information: (UK Sanctions List Ref):CYB0069. (UK Statement of Reasons):Dmitry
+Konstantinovich BOLSHAKOV is an involved person through his role in and association with ZSERVERS, an involved person identified as
+a key enabler of the cybercrime ecosystem. In this capacity, Dmitry Konstantinovich BOLSHAKOV was directly involved in the supply of
+goods or technology that could contribute to relevant cyber activity. Dmitry Konstantinovich BOLSHAKOV is therefore involved in
+enabling cybercrime. In this role, Dmitry Konstantinovich BOLSHAKOV was involved in relevant cyber activity that, directly or indirectly
+caused, or was intended to cause, economic loss to, or prejudice to the commercial interests of, those affected by the activity.
+(Gender):Male Listed on: 11/02/2025 UK Sanctions List Date Designated: 11/02/2025 Last Updated: 11/02/2025 Group ID:
+16751.
+7. Name 6: BOROVKOV 1: VLADISLAV 2: YEVGENYEVICH 3: n/a 4: n/a 5: n/a.
+Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0086. (UK Statement of Reasons):Russian GRU 29155 Officer
+Senior Lieutenant Vladislav Yevgenyevich BOROVKOV, through his membership of, and involvement with, a GRU cyber unit, has been
+responsible for, engaging in, providing support for, or promoting the commission, planning or preparation of relevant cyber activity. Such
+activity that BOROVKOV is or has been involved in undermines, or is intended to undermine, the integrity, prosperity or security of United
+Kingdom or a country other than the United Kingdom. (Gender):Male Listed on: 18/07/2025 UK Sanctions List Date Designated:
+18/07/2025 Last Updated: 18/07/2025 Group ID: 17005.
+8. Name 6: CHERNOV 1: MIKHAIL 2: VADIMOVICH 3: n/a 4: n/a 5: n/a.
+DOB: 26/01/1986. a.k.a: (1) BULLET (2) M2686 Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0030. (UK
+Statement of Reasons):Mikhail Vadimovich CHERNOV is or has been involved in relevant cyber activity, including being responsible for,
+engaging in providing support for, or promoting the commission, planning or preparation of relevant cyber activity; and providing technical
+assistance that could contribute to relevant cyber activity, namely ransomware attacks which undermined, or were intended to undermine,
+the integrity, prosperity and security of the United Kingdom and other countries, and were intended to cause economic loss to, or prejudice
+the commercial interests of, those companies affected by the activity. Specifically, Mikhail Vadimovich CHERNOV was part of the internal
+utilities group which were responsible for projects including autotests, cryptopanel and avclean. (Gender):Male Listed on: 07/09/2023 UK
+Sanctions List Date Designated: 07/09/2023 Last Updated: 07/09/2023 Group ID: 16072.
+9. Name 6: DENISOV 1: YURIY 2: FEDEROVICH 3: n/a 4: n/a 5: n/a.
+Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0082. (UK Statement of Reasons):Russian GRU 29155 Officer
+Colonel Yuriy Federovich DENISOV, through his prior involvement with a GRU cyber unit, has been responsible for, engaging in,
+providing support for, or promoting the commissions, planning or preparation of relevant cyber activity. Such activity that DENISOV is or
+has been involved in undermines, or is intended to undermine, the integrity, prosperity or security of United Kingdom or a country other than
+the United Kingdom. (Gender):Male Listed on: 18/07/2025 UK Sanctions List Date Designated: 18/07/2025 Last Updated:
+18/07/2025 Group ID: 17014.
+10. Name 6: ERMAKOV 1: ALEKSANDR 2: GENNADIEVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Александр Геннадьевич Ермаков
+DOB: 16/05/1990. POB: Russia a.k.a: (1) BLADE_RUNNER (2) ERMAKOV, Aleksandr, Gennadyevich (non-Latin
+script: Александр Геннадьевич Ермаков) (3) GISTAVEDORE (4) GUSTAVEDORE (5) JIMJONES Nationality:
+Russia Address: Moscow, Russia.Other Information: (UK Sanctions List Ref):CYB0043. (UK Statement of Reasons):Aleksandr
+ERMAKOV is or has been involved in relevant cyber activity, including being responsible for, engaging in, providing support for, malicious
+cyber activity that resulted in unauthorised access and exfiltration of sensitive data. The action compromised Medibank Private Limited, one
+of Australia’s largest private health insurance providers, and the resulting leak of millions of personal and medical records undermined the
+integrity, prosperity and security of Australia. (Gender):Male Listed on: 23/01/2024 UK Sanctions List Date Designated: 23/01/2024
+Last Updated: 23/01/2024 Group ID: 16345.
+11. Name 6: GALOCHKIN 1: MAKSIM 2: SERGEYEVICH 3: n/a 4: n/a 5: n/a.
+DOB: 19/05/1982. a.k.a: (1) BENTLEY (2) GALOCHKIN, Maxsim (3) MAX17 (4) VOLHVB Nationality: Russia Other
+Information: (UK Sanctions List Ref):CYB0031. (UK Statement of Reasons):Maksim Sergeyevich GALOCHKIN is or has been
+involved in relevant cyber activity, including being responsible for, engaging in providing support for, or promoting the commission, planning
+or preparation of relevant cyber activity; and providing technical assistance that could contribute to relevant cyber activity, namely
+ransomware attacks which undermined, or were intended to undermine, the integrity, prosperity and security of the United Kingdom and
+other countries, and were intended to cause economic loss to, or prejudice the commercial interests of, those companies affected by the
+activity. Specifically, Maksim Sergeyevich GALOCHKIN led a group of testers, with responsibilities for development, supervision and
+implementation of tests. He was also responsible for the issuing of crypts. (Gender):Male Listed on: 07/09/2023 UK Sanctions List Date
+Designated: 07/09/2023 Last Updated: 07/09/2023 Group ID: 16073.
+
+--- Page 2 ---
+
+12. Name 6: GAO 1: QIANG 2: n/a 3: n/a 4: n/a 5: n/a.
+DOB: 04/10/1983. POB: Shandong Province, China a.k.a: FISHERXP Nationality: China Address: Room 1102, Guanfu Mansion,
+46 Xinkai Road, Hedong District, Tianjin, China.Other Information: (UK Sanctions List Ref):CYB0001. (UK Statement of
+Reasons):Gao Qiang was involved in relevant cyber activity through his employment with Huaying Haitai and setting up command and
+control infrastructure used to conduct relevant cyber activity. He was therefore responsible for, engaged in, provided support for, or
+promoted the commission, planning or preparation of relevant cyber activity. (Gender):Male Listed on: 31/07/2020 UK Sanctions List
+Date Designated: 31/12/2020 Last Updated: 31/12/2020 Group ID: 13903.
+13. Name 6: GUSEV 1: DENIS 2: IGOREVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Денис Игоревич ГУСЕВ
+DOB: 10/06/1986. Other Information: (UK Sanctions List Ref):CYB0050. (UK Statement of Reasons):Denis Igorevich GUSEV is a
+member of Evil Corp, and has been involved in relevant cyber activity, including providing financial services, or making available funds or
+economic resources, that could contribute to malicious cyber activity that resulted in the unauthorised access and exfiltration of sensitive data
+from UK infrastructure and networks. He has also provided financial services that could contribute to relevant cyber activity. Denis GUSEV
+provided financial services for Evil Corp including acting as a cash courier. Evil Corp's malicious cyber activity involved a concerted effort to
+compromise UK health, government and public sector institutions, and commercial technology companies, for financial gain, undermined or
+was intended to undermine the integrity, prosperity and security of the United Kingdom and its allies. (Gender):Male Listed on:
+01/10/2024 UK Sanctions List Date Designated: 01/10/2024 Last Updated: 01/10/2024 Group ID: 16587.
+14. Name 6: ISKRITSKIY 1: MIKHAIL 2: n/a 3: n/a 4: n/a 5: n/a.
+DOB: 05/11/1981. a.k.a: (1) ISKRITSKI, Mikhail (2) ISKRITSKIY, Mihail (3) ISKRITSKY, Mikhail (4) TROPA Nationality:
+Russia Other Information: (UK Sanctions List Ref):CYB0026. (UK Statement of Reasons):Mikhail ISKTRITSKIY is or has been
+involved in relevant cyber activity, including being responsible for, engaging in, providing support for, or promoting the commission, planning
+or preparation of relevant cyber activity; and providing technical assistance that could contribute to relevant cyber activity, namely
+ransomware attacks which were intended to undermine the integrity, prosperity and security of the United Kingdom and other countries, and
+were intended to cause economic loss to, or prejudice the commercial interests of, those companies affected by the activity. Listed on:
+09/02/2023 UK Sanctions List Date Designated: 09/02/2023 Last Updated: 10/02/2023 Group ID: 15741.
+15. Name 6: KARYAGIN 1: VALENTIN 2: OLEGOVICH 3: n/a 4: n/a 5: n/a.
+DOB: 19/04/1992. a.k.a: GLOBUS Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0023. (UK Statement of
+Reasons):Valentin Olegovich KARYAGIN is or has been involved in relevant cyber activity, including being responsible for, engaging in,
+providing support for, or promoting the commission, planning or preparation of relevant cyber activity; and providing technical assistance
+that could contribute to relevant cyber activity, namely ransomware attacks which were intended to undermine the integrity, prosperity and
+security of the United Kingdom and other countries, and were intended to cause economic loss to, or prejudice the commercial interests of,
+those companies affected by the activity. Listed on: 09/02/2023 UK Sanctions List Date Designated: 09/02/2023 Last Updated:
+09/02/2023 Group ID: 15738.
+16. Name 6: KHALIULLIN 1: MAKSIM 2: MARSELEVICH 3: n/a 4: n/a 5: n/a.
+DOB: 28/02/1993. a.k.a: (1) KAGAS (2) KHALIULLIN, Maxsim Nationality: Russia Other Information: (UK Sanctions List
+Ref):CYB0032. (UK Statement of Reasons):Maksim Marselevich KHALIULLIN is or has been involved in relevant cyber activity,
+including being responsible for, engaging in providing support for, or promoting the commission, planning or preparation of relevant cyber
+activity; and providing technical assistance that could contribute to relevant cyber activity, namely ransomware attacks which undermined, or
+were intended to undermine, the integrity, prosperity and security of the United Kingdom and other countries, and were intended to cause
+economic loss to, or prejudice the commercial interests of, those companies affected by the activity. Specifically, Maksim Marselevich
+KHALIULLIN was an HR manager for the Group. He was associated with the purchase of Trickbot infrastructure including procuring
+Virtual Private Servers (VPS). (Gender):Male Listed on: 07/09/2023 UK Sanctions List Date Designated: 07/09/2023 Last
+Updated: 07/09/2023 Group ID: 16074.
+17. Name 6: KHOROSHEV 1: DMITRY 2: YUREYVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Дмитрий Юрьевич Хорошев
+DOB: 17/04/1993. a.k.a: (1) KHOROSHEV, Dmitriy, Yureyvich (2) LOCKBITSUPP Nationality: Russia Address: Russia.Other
+Information: (UK Sanctions List Ref):CYB0047. (UK Statement of Reasons):Dmitry Yureyvich KHOROSHEV is or has been involved
+in relevant cyber activity in that he has been responsible for, engaged in, provided support for or promoted the commission, planning or
+preparation of relevant cyber activity, or provided technical assistance that could contribute to relevant cyber activity. In particular,
+KHOROSHEV has been the primary user of the online moniker and public facing identity LockBitSupp. We assess that KHOROSHEV is
+a senior leader of the LockBit ransomware group and was centrally involved in the administration, its infrastructure and operations.
+KHOROSHEV, has been a significant direct financial beneficiary of LockBit ransomware activity. LockBit are responsible for ransomware
+attacks against thousands of victims around the world, including in the UK, which have been estimated to result in billions of dollars of losses
+globally, impacting businesses and the livelihoods of ordinary citizens. LockBit has conducted or enabled malicious ransomware campaigns
+against a range of targets, involving actual or attempted unauthorised access to and interference with information systems and data, activities
+which undermined or were intended to undermine the integrity, prosperity or security of the United Kingdom or a country other than the
+United Kingdom, or directly or indirectly caused or were intended to cause economic loss to or prejudice to the commercial interests of
+those affected by the activity. (Gender):Male Listed on: 07/05/2024 UK Sanctions List Date Designated: 07/05/2024 Last Updated:
+07/05/2024 Group ID: 16494.
+18. Name 6: KORCHAGIN 1: NIKOLAY 2: ALEKSANDROVICH 3: n/a 4: n/a 5: n/a.
+Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0083. Date trust services sanctions imposed: 18/07/2025. (UK
+Statement of Reasons):Russian GRU 29155 Officer Senior Lieutenant Nikolay Aleksandrovich KORCHAGIN, through his membership of,
+and involvement with, a GRU cyber unit, has been responsible for, engaging in, providing support for, or promoting the commission,
+
+--- Page 3 ---
+
+planning or preparation of relevant cyber activity. Such activity that KORCHAGIN is or has been involved in undermines, or is intended to
+undermine, the integrity, prosperity or security of United Kingdom or a country other than the United Kingdom. (Gender):Male Listed on:
+18/07/2025 UK Sanctions List Date Designated: 18/07/2025 Last Updated: 18/07/2025 Group ID: 17015.
+19. Name 6: KORINETS 1: ANDREY 2: STANISLAVOVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Андрей Станиславович КОРИНЕЦ
+DOB: 18/05/1987. POB: Russia a.k.a: DOGUZHIEV, Alexey Nationality: Russia Passport Number: 8707233962 Address: Komi
+Republic, Syktyvkar, Russia.Other Information: (UK Sanctions List Ref):CYB0042. (UK Statement of Reasons):Andrey Stanislavovich
+KORINETS, a member of the Callisto Group (AKA Seaborgium, Star Blizzard, Cold River), is or has been involved in relevant cyber
+activity, including providing technical assistance that could contribute to relevant cyber activity. This included the preparation of spear-
+phishing campaigns and associated activity that resulted in unauthorised access and exfiltration of sensitive data. This action undermined, or
+was intended to undermine, the integrity, prosperity and security of UK organisations and more broadly, the UK government, and directly
+or indirectly caused, or was intended to cause, economic loss to, or prejudice to the commercial interests of, those affected by the activity.
+The Callisto Group, a cyber programme operated by officers of the Russian FSB, was responsible for intrusions into the Institute for
+Statecraft (IfS), a UK-based think tank responsible for a programme to research, publicise, and counter the threat to European
+democracies from disinformation and other forms of hybrid warfare. Official documents belonging to IfS were released in the hack and
+subsequent leak, resulting from the preparation of spear-phishing campaigns and associated activity. (Gender):Male Listed on: 07/12/2023
+UK Sanctions List Date Designated: 07/12/2023 Last Updated: 07/12/2023 Group ID: 16278.
+20. Name 6: KOSTYUKOV 1: IGOR 2: OLEGOVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Игорь Олегович КОСТЮКОВ
+DOB: (1) 21/02/1961. (2) 21/01/1961. POB: Amur Oblast Nationality: Russia Position: Head of the Main Directorate of the General
+Staff of the Armed Forces of the Russian Federation (GRU/GU). Head of the Russian General Staff's Main Intelligence Department (GRU)
+of the Russian Federation Other Information: (UK Sanctions List Ref):CHW0009 and CYB0011. Listed under the Chemical Weapons
+and Cyber sanctions regimes. (UK Statement of Reasons):Igor Olegovich Kostyukov, given his senior leadership role as First Deputy Head
+of the GRU (a.k.a. GU) at that time, is responsible for the possession, transport and use in Salisbury during the weekend of 4 March 2018
+of the toxic nerve agent “Novichok” by officers from the GRU. Igor Kostyukov is the Head of the Russian General Staff’s Main Intelligence
+Department (GRU), and was previously First Deputy Head. In this capacity, Igor Kostyukov is responsible for cyber attacks carried out by
+the 85th Main Centre of Special Services (GTsSS), also referred to as Field Post Number 26165, APT28, Fancy Bear, Sofacy Group,
+Pawn Storm, Strontium. These attacks include the cyber attack against the German federal parliament (Deutscher Bundestag) in April and
+May 2015. The cyber attack against the German federal parliament (Deutscher Bundestag) targeted the parliament’s information system and
+affected its operation for several days. A significant amount of data was stolen and e-mail accounts of several MPs as well as Chancellor
+Angela Merkel were affected. (Gender):Male Listed on: 23/10/2020 UK Sanctions List Date Designated: 31/12/2020 Last
+Updated: 31/12/2020 Group ID: 13748.
+21. Name 6: KOVALEV 1: VITALIY 2: NIKOLAYEVICH 3: n/a 4: n/a 5: n/a.
+DOB: 23/06/1988. a.k.a: (1) BEN (2) BENTLEY (3) KOVALEV, Vitaly Nationality: Russia Other Information: (UK Sanctions List
+Ref):CYB0027. The ‘Bentley’ alias is for historical use of the moniker. (UK Statement of Reasons):Vitaliy Nikolayevich KOVALEV is or
+has been involved in relevant cyber activity, including being responsible for, engaging in, providing support for, or promoting the commission,
+planning or preparation of relevant cyber activity; and providing technical assistance that could contribute to relevant cyber activity, namely
+ransomware attacks which were intended to undermine the integrity, prosperity and security of the United Kingdom and other countries, and
+were intended to cause economic loss to, or prejudice the commercial interests of, those companies affected by the activity. Listed on:
+09/02/2023 UK Sanctions List Date Designated: 09/02/2023 Last Updated: 06/04/2023 Group ID: 15742.
+22. Name 6: KOVALEV 1: ANATOLIY 2: SERGEYEVICH 3: n/a 4: n/a 5: n/a.
+DOB: 02/08/1991. Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0088. (UK Statement of Reasons):Anatoliy
+Sergeyevich KOVALEV is or has been an involved person in relevant cyber activity commissioned by GRU Unit 74455. In this capacity,
+Anatoliy Sergeyevich KOVALEV is or has been responsible for, engaging in, providing support for, or promoting the commission, planning
+or preparation of relevant cyber activity. Such activity that Anatoliy Sergeyevich KOVALEV is or has been involved in undermines, or is
+intended to undermine, the integrity, prosperity or security of the United Kingdom or a country other than the United Kingdom.
+(Gender):Male Listed on: 18/07/2025 UK Sanctions List Date Designated: 18/07/2025 Last Updated: 18/07/2025 Group ID:
+17001.
+23. Name 6: KUROV 1: ARTEM 2: IGOREVICH 3: n/a 4: n/a 5: n/a.
+DOB: 30/03/1993. a.k.a: NANED Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0033. (UK Statement of
+Reasons):Artem Igorevich KUROV is or has been involved in relevant cyber activity, including being responsible for, engaging in providing
+support for, or promoting the commission, planning or preparation of relevant cyber activity; and providing technical assistance that could
+contribute to relevant cyber activity, namely ransomware attacks which undermined, or were intended to undermine, the integrity, prosperity
+and security of the United Kingdom and other countries, and were intended to cause economic loss to, or prejudice the commercial interests
+of, those companies affected by the activity. Specifically, Artem Igorevich KUROV worked as a coder with development duties in the
+Trickbot group. (Gender):Male Listed on: 07/09/2023 UK Sanctions List Date Designated: 07/09/2023 Last Updated: 07/09/2023
+Group ID: 16075.
+24. Name 6: LOGUNTSOV 1: SERGEY 2: n/a 3: n/a 4: n/a 5: n/a.
+DOB: 15/07/1983. a.k.a: (1) BEGEMOT (2) BEGEMOT_SUN (3) ZULAS Nationality: Russia Other Information: (UK Sanctions
+List Ref):CYB0038. (UK Statement of Reasons):Sergey LOGUNTSOV is or has been involved in relevant cyber activity, including being
+responsible for, engaging in providing support for, or promoting the commission, planning or preparation of relevant cyber activity; and
+providing technical assistance that could contribute to relevant cyber activity, namely ransomware attacks which undermined, or were
+intended to undermine, the integrity, prosperity and security of the United Kingdom and other countries, and were intended to cause
+
+--- Page 4 ---
+
+economic loss to, or prejudice the commercial interests of, those companies affected by the activity. Specifically, Sergey LOGUNTSOV
+was a developer for the Group. (Gender):Male Listed on: 07/09/2023 UK Sanctions List Date Designated: 07/09/2023 Last
+Updated: 07/09/2023 Group ID: 16080.
+25. Name 6: LUKASHEV 1: ALEKSEY 2: VIKTOROVICH 3: n/a 4: n/a 5: n/a.
+Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0090. (UK Statement of Reasons):As a member of GRU Unit
+26165, Aleksey Viktorovich LUKASHEV has been involved in relevant cyber activity in that he was responsible for, engaging in, providing
+support for, or promoting the commissioning, planning or preparation of relevant cyber activity, including the targeting of Yuliya Skripal with
+X-Agent. Such activity that Aleksey Viktorovich LUKASHEV has been involved in, or is intended to undermine, the integrity, prosperity or
+security of the United Kingdom or a country other than the United Kingdom. (Gender):Male Listed on: 18/07/2025 UK Sanctions List
+Date Designated: 18/07/2025 Last Updated: 18/07/2025 Group ID: 16998.
+26. Name 6: MALYSHEV 1: ARTEM 2: ANDREYEVICH 3: n/a 4: n/a 5: n/a.
+Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0095. (UK Statement of Reasons):As a member of GRU Unit
+26165, Artem Adreyevich MALYSHEV has been involved in relevant cyber activity in that he was responsible for, engaging in, providing
+support for, or promoting the commissioning, planning or preparation of relevant cyber activity. Such activity that Artem Andreyevich
+MALYSHEV has been involved in, or is intended to undermine, the integrity, prosperity or security of the United Kingdom or a country
+other than the United Kingdom. (Gender):Male Listed on: 18/07/2025 UK Sanctions List Date Designated: 18/07/2025 Last
+Updated: 18/07/2025 Group ID: 16992.
+27. Name 6: MIKHAILOV 1: MAKSIM 2: SERGEEVICH 3: n/a 4: n/a 5: n/a.
+DOB: 29/07/1976. a.k.a: (1) BAGET (2) MAXMS76 (3) MIKHAILOV, Maxim Nationality: Russia Other Information: (UK
+Sanctions List Ref):CYB0024. (UK Statement of Reasons):Maksim Sergeevich MIKHAILOV is or has been involved in relevant cyber
+activity, including being responsible for, engaging in, providing support for, or promoting the commission, planning or preparation of relevant
+cyber activity; and providing technical assistance that could contribute to relevant cyber activity, namely ransomware attacks which were
+intended to undermine the integrity, prosperity and security of the United Kingdom and other countries, and were intended to cause
+economic loss to, or prejudice the commercial interests of, those companies affected by the activity. Listed on: 09/02/2023 UK Sanctions
+List Date Designated: 09/02/2023 Last Updated: 09/02/2023 Group ID: 15739.
+28. Name 6: MIKHAYLOV 1: DMITRIY 2: ALEKSANDROVICH 3: n/a 4: n/a 5: n/a.
+Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0075. (UK Statement of Reasons):Russian GRU Senior Officer
+General-Major Dmitriy Aleksandrovich MIKHAYLOV is or has been responsible for, engaging in, providing support for, or promoting the
+commission, planning or preparation of relevant cyber activity. Additionally, MIKHAYLOV remains associated with, a person who is or
+has been so involved, by reason of his continuing service in the GRU. The relevant cyber activity in which MIKHAYLOV is or has been
+involved undermines, or was intended to undermine, the integrity, prosperity or security of the United Kingdom or a country other than the
+United Kingdom. Listed on: 18/07/2025 UK Sanctions List Date Designated: 18/07/2025 Last Updated: 18/07/2025 Group ID:
+17008.
+29. Name 6: MININ 1: ALEXEI 2: VELERYEVICH 3: n/a 4: n/a 5: n/a.
+DOB: 27/05/1972. POB: Perm Oblast, Russia a.k.a: MININ, Alexey, Valeryevich Nationality: Russia Passport Number:
+120017582 Address: Moscow, Russia.Position: HUMINT Support (GRU) Other Information: (UK Sanctions List Ref):CYB0005.
+(UK Statement of Reasons):Alexey Valeryevich Minin was part of a team of intelligence officers of the Russian General Staff Main
+Intelligence Directorate (GRU) unit known as field post number 26165 that attempted to gain unauthorised access to the information
+systems of the Organisation for the Prohibition of Chemical Weapons (OPCW) in April 2018. The Netherlands authorities disrupted the
+cyber attack before it was successful. This attempted relevant cyber activity was intended to undermine the independence or effective
+functioning of an international organisation. (Gender):Male Listed on: 31/07/2020 UK Sanctions List Date Designated: 31/12/2020
+Last Updated: 31/12/2020 Group ID: 13905.
+30. Name 6: MISHIN 1: ALEKSANDR 2: IGOREVICH 3: n/a 4: n/a 5: n/a.
+DOB: 18/03/1994. POB: Altayskiy Kray, Russia a.k.a: (1) ALEX560560 (2) JAMES1789 (3) SASHA-
+BRN (4) TRIPLEX560 Nationality: Russia Passport Number: 5904776 Other Information: (UK Sanctions List Ref):CYB0067.
+(UK Statement of Reasons):Aleksandr Igorevich MISHIN is an involved person through his role in and association with ZSERVERS, an
+involved person identified as a key enabler of the cybercrime ecosystem. In this capacity, Aleksandr Igorevich MISHIN was directly
+involved in the supply of goods or technology that could contribute to relevant cyber activity, or in providing financial services relating to
+such supply, as well as the provision of technical assistance that could contribute to relevant cyber activity. Aleksandr Igorevich MISHIN is
+therefore involved in enabling cybercrime. In this role, Aleksandr Igorevich MISHIN was involved in relevant cyber activity that, directly or
+indirectly caused, or was intended to cause, economic loss to, or prejudice to the commercial interests of, those affected by the activity.
+(Gender):Male Listed on: 11/02/2025 UK Sanctions List Date Designated: 11/02/2025 Last Updated: 11/02/2025 Group ID:
+16749.
+31. Name 6: MORENETS 1: ALEKSEY 2: SERGEYEVICH 3: n/a 4: n/a 5: n/a.
+a.k.a: MORENETS, Aleksei Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0006. (UK Statement of
+Reasons):As a member of GRU Unit 26165, Aleksey Sergeyevich MORENETS has been involved in relevant cyber activity in that he was
+responsible for, engaging in, providing support for, or promoting the commissioning, planning or preparation of relevant cyber activity. Such
+activity that Aleksey Sergeyevich MORENETS has been involved in, or is intended to undermine, the integrity, prosperity or security of the
+United Kingdom or a country other than the United Kingdom. (Gender):Male Listed on: 31/07/2020 UK Sanctions List Date
+Designated: 31/12/2020 Last Updated: 12/08/2025 Group ID: 13906.
+32. Name 6: MORGACHEV 1: SERGEY 2: ALEKSANDROVICH 3: n/a 4: n/a 5: n/a.
+Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0094. (UK Statement of Reasons):As a member of GRU Unit
+
+--- Page 5 ---
+
+26165, Sergey Aleksandrovich MORGACHEV has been involved in relevant cyber activity in that he was responsible for, engaging in,
+providing support for, or promoting the commissioning, planning or preparation of relevant cyber activity. Such activity that Sergey
+Aleksandrovich MORGACHEV has been involved in, or is intended to undermine, the integrity, prosperity or security of the United
+Kingdom or a country other than the United Kingdom. (Gender):Male Listed on: 18/07/2025 UK Sanctions List Date Designated:
+18/07/2025 Last Updated: 18/07/2025 Group ID: 16993.
+33. Name 6: MOZHAEV 1: ALEXANDER 2: VYACHESLAVOVICH 3: n/a 4: n/a 5: n/a.
+DOB: 02/10/1978. a.k.a: (1) GREEN (2) MOZHAEV, Alexandr, Vyacheslavovich (3) ROCCO Nationality: Russia Other
+Information: (UK Sanctions List Ref):CYB0034. (UK Statement of Reasons):Alexander Vyacheslavovich MOZHAEV is or has been
+involved in relevant cyber activity, including being responsible for, engaging in providing support for, or promoting the commission, planning
+or preparation of relevant cyber activity; and providing technical assistance that could contribute to relevant cyber activity, namely
+ransomware attacks which undermined, or were intended to undermine, the integrity, prosperity and security of the United Kingdom and
+other countries, and were intended to cause economic loss to, or prejudice the commercial interests of, those companies affected by the
+activity. Specifically, Alexander Vyacheslavovich MOZHAEV was part of the admin team responsible for general administration duties.
+(Gender):Male Listed on: 07/09/2023 UK Sanctions List Date Designated: 07/09/2023 Last Updated: 07/09/2023 Group ID:
+16076.
+34. Name 6: NETYKSHO 1: VIKTOR 2: BORISOVICH 3: n/a 4: n/a 5: n/a.
+Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0078. (UK Statement of Reasons):Russian GRU Senior Officer
+General-Major Viktor Borisovich NETYKSHO is or has been responsible for, engaging in, providing support for, or promoting the
+commission, planning or preparation of relevant cyber activity. Additionally, NETYKSHO remains associated with, a person who is or has
+been so involved, by reason of his continuing service in the GRU. The relevant cyber activity in which NETYKSHO is or has been involved
+undermines, or was intended to undermine, the integrity, prosperity or security of the United Kingdom or a country other than the United
+Kingdom. Listed on: 18/07/2025 UK Sanctions List Date Designated: 18/07/2025 Last Updated: 18/07/2025 Group ID: 17011.
+35. Name 6: NI 1: GAOBIN 2: n/a 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): 倪高彬
+DOB: 27/10/1985. POB: Jingzhou Municipality, China Nationality: China National Identification Number:
+421003198510272917 Address: Hubei Province, China.Other Information: (UK Sanctions List Ref):CYB0046. (UK Statement of
+Reasons):NI Gaobin, a member of Advanced Persistent Threat Group 31 (APT31), is, or has been, involved in relevant cyber activity,
+including being responsible for, engaging in, or providing support for the commission, planning, or preparation of relevant cyber activity. This
+included the preparation for, and/or the provision of support to, sophisticated cyber activity, including spear-phishing campaigns and
+information systems interference which resulted in the unauthorised access to, and exfiltration of, sensitive data. Such campaigns included
+cyber activities targeting officials, government entities and parliamentarians conducted by APT31 against such individuals in the UK and
+internationally. As such, NI Gaobin, is a member, and an involved person in the activity of the APT31 group operating on behalf of the
+Chinese Ministry of State Security (MSS) as part of the PRC’s state-sponsored apparatus and himself has engaged in relevant cyber
+activity, in support of malicious cyber activity that targeted officials, government entities and parliamentarians. This action undermined, or
+was intended to undermine, the integrity, prosperity and security of UK and international organisations and individuals engaged in political
+and democratic processes. (Gender):Male Listed on: 25/03/2024 UK Sanctions List Date Designated: 25/03/2024 Last Updated:
+25/03/2024 Group ID: 16462.
+36. Name 6: OCHICHENKO 1: ARTEM 2: VALERYVICH 3: n/a 4: n/a 5: n/a.
+DOB: 08/11/1992. Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0074. (UK Statement of Reasons):Artem
+Valeryvich OCHICHENKO is or has been an involved person in relevant cyber activity commissioned by GRU Unit 74455. In this
+capacity, Artem Valeryvich OCHICHENKO is or has been responsible for, engaging in, providing support for, or promoting the
+commission, planning or preparation of relevant cyber activity. Such activity that Artem Valeryvich OCHICHENKO is or has been involved
+in undermines, or is intended to undermine, the integrity, propsperity or security of the United Kingdom or a country other than the United
+Kingdom. (Gender):Male Listed on: 18/07/2025 UK Sanctions List Date Designated: 18/07/2025 Last Updated: 18/07/2025
+Group ID: 17002.
+37. Name 6: ODINTSOV 1: IGOR 2: VLADIMIROVICH 3: n/a 4: n/a 5: n/a.
+DOB: 24/08/1994. a.k.a: (1) IGOR1994V (2) SAYROCS Nationality: Russia Other Information: (UK Sanctions List
+Ref):CYB0070. (UK Statement of Reasons):Igor Vladimirovich ODINTSOV is an involved person through his role in and association with
+ZSERVERS, an involved person identified as a key enabler of the cybercrime ecosystem. In this capacity, Igor Vladimirovich ODINTSOV
+was directly involved in the supply of goods or technology that could contribute to relevant cyber activity, as well as the provision of
+technical assistance that could contribute to relevant cyber activity. Igor Vladimirovich ODINTSOV is therefore involved in enabling
+cybercrime. In this role, Igor Vladimirovich ODINTSOV was involved in relevant cyber activity that, directly or indirectly caused, or was
+intended to cause, economic loss to, or prejudice to the commercial interests of, those affected by the activity. (Gender):Male Listed on:
+11/02/2025 UK Sanctions List Date Designated: 11/02/2025 Last Updated: 11/02/2025 Group ID: 16752.
+38. Name 6: OSADCHUK 1: ALEKSANDR 2: VLADIMIROVICH 3: n/a 4: n/a 5: n/a.
+DOB: 17/11/1962. Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0076. (UK Statement of Reasons):Aleksandr
+Vladimirovich OSADCHUK is or has been an involved person in relevant cyber activity commissioned by GRU Unit 74455. In this
+capacity, Aleksandr Vladimirovich OSADCHUK is or has been responsible for, engaging in, providing support for, or promoting the
+commission, planning or preparation of relevant cyber activity. Such activity that Aleksandr Vladimirovich OSADCHUK is or has been
+involved in undermines, or is intended to undermine, the integrity, propsperity or security of the United Kingdom or a country other than the
+United Kingdom. (Gender):Male Listed on: 18/07/2025 UK Sanctions List Date Designated: 18/07/2025 Last Updated:
+18/07/2025 Group ID: 17009.
+
+--- Page 6 ---
+
+39. Name 6: PERETYATKO 1: RUSLAN 2: ALEKSANDROVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Руслан Александрович ПЕРЕТЯТЬКО
+DOB: 03/08/1985. POB: Russia Nationality: Russia Passport Number: 8705080546 Address: Komi Republic, Russia.Other
+Information: (UK Sanctions List Ref):CYB0041. (UK Statement of Reasons):Ruslan Aleksandrovich PERETYATKO, a Russian FSB
+Intelligence Officer and a member of the Callisto Group (AKA Seaborgium, Star Blizzard, Cold River), is or has been involved in relevant
+cyber activity, including being responsible for, engaging in, providing support for, or promoting the commission, planning or preparation of
+relevant cyber activity. This included the preparation of spear-phishing campaigns and associated activity that resulted in unauthorised
+access and exfiltration of sensitive data. This action undermined, or was intended to undermine, the integrity, prosperity and security of UK
+organisations and more broadly, the UK government, and directly or indirectly caused, or was intended to cause, economic loss to, or
+prejudice to the commercial interests of, those affected by the activity. The Callisto Group, a cyber programme operated by officers of the
+Russian FSB , was responsible for intrusions into the Institute for Statecraft (IfS), a UK-based think tank responsible for a programme to
+research, publicise, and counter the threat to European democracies from disinformation and other forms of hybrid warfare. Official
+documents belonging to IfS were released in the hack and subsequent leak, resulting from the preparation of spear-phishing campaigns and
+associated activity. (Gender):Male Listed on: 07/12/2023 UK Sanctions List Date Designated: 07/12/2023 Last Updated:
+07/12/2023 Group ID: 16277.
+40. Name 6: PLESHEVSKIY 1: DMITRY 2: n/a 3: n/a 4: n/a 5: n/a.
+DOB: 30/07/1992. a.k.a: (1) ISELDOR (2) PLESHEVSKIY DIMA (3) PLESHEVSKIY, Dimitri (4) PLESHEVSKIY,
+Dimitry Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0025. (UK Statement of Reasons):Dmitry
+PLESHEVSKIY is or has been involved in relevant cyber activity, including being responsible for, engaging in, providing support for, or
+promoting the commission, planning or preparation of relevant cyber activity; and providing technical assistance that could contribute to
+relevant cyber activity, namely ransomware attacks which were intended to undermine the integrity, prosperity and security of the United
+Kingdom and other countries, and were intended to cause economic loss to, or prejudice the commercial interests of, those companies
+affected by the activity. Listed on: 09/02/2023 UK Sanctions List Date Designated: 09/02/2023 Last Updated: 10/02/2023 Group
+ID: 15740.
+41. Name 6: PLOTNITSKIY 1: ANDREY 2: VECHISLAVOVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Андрей Вечиславович ПЛОТНИЦКИЙ
+DOB: 25/07/1989. a.k.a: KOVALSKIY, Andrey, Vechislavovich (non-Latin script: Андрей Вечиславович
+КОВАЛЬСКИЙ) Other Information: (UK Sanctions List Ref):CYB0054. (UK Statement of Reasons):Andrey Vechislavovich
+PLOTNITSKIY is a member of Evil Corp, and has been involved in relevant cyber activity, including being responsible for, engaging in and
+providing support for malicious cyber activity that resulted in the unauthorised access and exfiltration of sensitive data from UK infrastructure
+and networks. Andrey PLOTNITSKIY is associated with Maksim YAKUBETS who was involved in relevant cyber activity through his
+leadership of Evil Corp and Dmitry SMIRNOV who was involved in relevant cyber activity through his facilitation of money laundering
+activity for Evil Corp. Evil Corp's malicious cyber activity involved a concerted effort to compromise UK health, government and public
+sector institutions, and commercial technology companies, for financial gain, undermined or was intended to undermine the integrity,
+prosperity and security of the United Kingdom and its allies. (Gender):Male Listed on: 01/10/2024 UK Sanctions List Date
+Designated: 01/10/2024 Last Updated: 01/10/2024 Group ID: 16580.
+42. Name 6: POGODIN 1: VADIM 2: GENNADYEVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Вадим Геннадьевич ПОГОДИН
+DOB: 19/03/1986. a.k.a: (1) BIBA (2) POGODIN, Vadim, Gennadievich Other Information: (UK Sanctions List Ref):CYB0063.
+(UK Statement of Reasons):Vadim Gennadyevich POGODIN is a member of Evil Corp, and has been involved in relevant cyber activity,
+including being responsible for, engaging in and providing support for malicious cyber activity that resulted in the unauthorised access and
+exfiltration of sensitive data from UK infrastructure and networks. Vadim POGODIN had a direct role in Evil Corp's ransomware activity.
+Evil Corp's malicious cyber activity involved a concerted effort to compromise UK health, government and public sector institutions, and
+commercial technology companies, for financial gain, which undermined or was intended to undermine the integrity, prosperity and security
+of the United Kingdom and its allies. (Gender):Male Listed on: 01/10/2024 UK Sanctions List Date Designated: 01/10/2024 Last
+Updated: 01/10/2024 Group ID: 16594.
+43. Name 6: PUTILIN 1: DMITRY 2: SERGEEVICH 3: n/a 4: n/a 5: n/a.
+DOB: 24/03/1993. a.k.a: (1) GRAD (2) STAFF Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0035. (UK
+Statement of Reasons):Dmitry Sergeevich PUTILIN is or has been involved in relevant cyber activity, including being responsible for,
+engaging in providing support for, or promoting the commission, planning or preparation of relevant cyber activity; and providing technical
+assistance that could contribute to relevant cyber activity, namely ransomware attacks which undermined, or were intended to undermine,
+the integrity, prosperity and security of the United Kingdom and other countries, and were intended to cause economic loss to, or prejudice
+the commercial interests of, those companies affected by the activity. Specifically, Dmitry Sergeevich PUTILIN was associated with the
+purchase of Trickbot infrastructure. (Gender):Male Listed on: 07/09/2023 UK Sanctions List Date Designated: 07/09/2023 Last
+Updated: 07/09/2023 Group ID: 16077.
+44. Name 6: RAMAZANOV 1: BEYAT 2: ENVEROVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Беят Энверович РАМАЗАНОВ
+DOB: 05/01/1988. Other Information: (UK Sanctions List Ref):CYB0059. (UK Statement of Reasons):Beyat Enverovich
+RAMAZANOV is a member of Evil Corp, and has been involved in relevant cyber activity, including providing financial services, or making
+available funds or economic resources, that could contribute to malicious cyber activity that resulted in the unauthorised access and
+exfiltration of sensitive data from UK infrastructure and networks. He has also provided financial services that could contribute to relevant
+cyber activity. Beyat RAMAZANOV is associated with Maksim YAKUBETS who was involved in relevant cyber activity through his
+leadership of Evil Corp; Dmitry SMIRNOV who was involved in relevant cyber activity through his facilitation of money laundering activity
+
+--- Page 7 ---
+
+for Evil Corp; and Aleksandr RYZHENKOV who was a senior member and manager of Evil Corp, and was involved in the development
+and deployment of ransomware that was used by Evil Corp to carry out its relevant cyber activity. Evil Corp's malicious cyber activity
+involved a concerted effort to compromise UK health, government and public sector institutions, and commercial technology companies, for
+financial gain, which undermined or was intended to undermine the integrity, prosperity and security of the United Kingdom and its allies.
+(Gender):Male Listed on: 01/10/2024 UK Sanctions List Date Designated: 01/10/2024 Last Updated: 01/10/2024 Group ID:
+16590.
+45. Name 6: RUDENSKIY 1: MAKSIM 2: n/a 3: n/a 4: n/a 5: n/a.
+DOB: 01/11/1977. a.k.a: (1) BINMAN (2) BUZA (3) SILVER Nationality: Russia Other Information: (UK Sanctions List
+Ref):CYB0036. (UK Statement of Reasons):Maksim RUDENSKIY is or has been involved in relevant cyber activity, including being
+responsible for, engaging in providing support for, or promoting the commission, planning or preparation of relevant cyber activity; and
+providing technical assistance that could contribute to relevant cyber activity, namely ransomware attacks which undermined, or were
+intended to undermine, the integrity, prosperity and security of the United Kingdom and other countries, and were intended to cause
+economic loss to, or prejudice the commercial interests of, those companies affected by the activity. Specifically, Maksim RUDENSKIY
+was a key member of the Trickbot group. He was the team lead for coders. (Gender):Male Listed on: 07/09/2023 UK Sanctions List
+Date Designated: 07/09/2023 Last Updated: 07/09/2023 Group ID: 16078.
+46. Name 6: RYZHENKOV 1: SERGEY 2: VIKTOROVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Сергей Викторович РЫЖЕНКОВ
+DOB: 15/02/1989. Other Information: (UK Sanctions List Ref):CYB0061. (UK Statement of Reasons):Sergey Viktorovich
+RYZHENKOV is a member of Evil Corp, and has been involved in relevant cyber activity, including being responsible for, engaging in and
+providing support for malicious cyber activity that resulted in the unauthorised access and exfiltration of sensitive data from UK infrastructure
+and networks. He has also provided technical assistance that could contribute to relevant cyber activity. Sergey RYZHENKOV was
+involved in the development of ransomware that was used by Evil Corp to carry out its relevant cyber activity. Evil Corp's malicious cyber
+activity involved a concerted effort to compromise UK health, government and public sector institutions, and commercial technology
+companies, for financial gain, which undermined or was intended to undermine the integrity, prosperity and security of the United Kingdom
+and its allies. (Gender):Male Listed on: 01/10/2024 UK Sanctions List Date Designated: 01/10/2024 Last Updated: 01/10/2024
+Group ID: 16592.
+47. Name 6: RYZHENKOV 1: ALEKSANDR 2: VIKTOROVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Александр Викторович РЫЖЕНКОВ
+DOB: 26/05/1993. a.k.a: (1) BEVERLEY (2) GUESTER (3) MX1R Other Information: (UK Sanctions List Ref):CYB0062. (UK
+Statement of Reasons):Aleksandr Viktorovich RYZHENKOV is a member of Evil Corp, and has been involved in relevant cyber activity,
+including being responsible for, engaging in and providing support for malicious cyber activity that resulted in the unauthorised access and
+exfiltration of sensitive data from UK infrastructure and networks. He has also provided technical assistance that could contribute to relevant
+cyber activity. Aleksandr RYZHENKOV was a senior member and manager of Evil Corp, and was involved in the development and
+deployment of ransomware that was used by Evil Corp to carry out its relevant cyber activity. Additionally, Aleksandr RYZHENKOV is
+linked to the deployment of LockBit ransomware and is associated with UNC2165 (an evolution of Evil Corp affiliated actors). Evil Corp's
+malicious cyber activity involved a concerted effort to compromise UK health, government and public sector institutions, and commercial
+technology companies, for financial gain, which undermined or was intended to undermine the integrity, prosperity and security of the United
+Kingdom and its allies. (Gender):Male Listed on: 01/10/2024 UK Sanctions List Date Designated: 01/10/2024 Last Updated:
+01/10/2024 Group ID: 16593.
+48. Name 6: SEDLETSKI 1: VALERY 2: VENIAMINOVICH 3: n/a 4: n/a 5: n/a.
+DOB: 29/07/1974. a.k.a: (1) SEDLETSKIY, Valeri (2) STRIX (3) VALERIUS Nationality: Russia Other Information: (UK
+Sanctions List Ref):CYB0029. (UK Statement of Reasons):Valery Veniaminovich SEDLETSKI is or has been involved in relevant cyber
+activity, including being responsible for, engaging in, providing support for, or promoting the commission, planning or preparation of relevant
+cyber activity; and providing technical assistance that could contribute to relevant cyber activity, namely ransomware attacks which were
+intended to undermine the integrity, prosperity and security of the United Kingdom and other countries, and were intended to cause
+economic loss to, or prejudice the commercial interests of, those companies affected by the activity. Listed on: 09/02/2023 UK Sanctions
+List Date Designated: 09/02/2023 Last Updated: 09/02/2023 Group ID: 15744.
+49. Name 6: SEREBRIAKOV 1: YEVGENIY 2: MIKHAYLOVICH 3: n/a 4: n/a 5: n/a.
+DOB: 26/07/1981. a.k.a: SEREBRYAKOV, Yevgeniy, Mikhaylovich Nationality: Russia Other Information: (UK Sanctions List
+Ref):CYB0007. (UK Statement of Reasons):Yevgeniy Mikhaylovich SEREBRIAKOV is a member of GRU Unit 74455. In this capacity,
+Yevgeniy Mikhaylovich SEREBRIAKOV is or has been involved in relevant cyber activity through his leadership and oversight of GRU
+Unit 74455, in which SEREBRIAKOV is or has been responsible for, engaging in, providing support for, or promoting the commission,
+planning or preparation of relevant cyber activity. Such activity that Yevgeniy Mikhaylovich SEREBRIAKOV is or has been involved in
+undermines, or is intended to undermine, the integrity, prosperity or security of the United Kingdom or a country other than the United
+Kingdom. (Gender):Male Listed on: 31/07/2020 UK Sanctions List Date Designated: 31/12/2020 Last Updated: 12/08/2025
+Group ID: 13907.
+50. Name 6: SHCHETININ 1: ALEKSEY 2: EVGENYEVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Алексей Евгеньевич ЩЕТИНИН
+DOB: 22/08/1987. a.k.a: SHCHETININ, Aleksey, Yevgenevich Other Information: (UK Sanctions List Ref):CYB0058. (UK
+Statement of Reasons):Aleksey Evgenyevich SHCHETININ is a member of Evil Corp, and has been involved in relevant cyber activity,
+including providing financial services, or making available funds or economic resources, that could contribute to malicious cyber activity that
+resulted in the unauthorised access and exfiltration of sensitive data from UK infrastructure and networks. He has also provided financial
+services that could contribute to relevant cyber activity. Aleksey SHCHETININ provided financial services through coordinating the trading
+
+--- Page 8 ---
+
+of cryptocurrency on behalf of Evil Corp. Evil Corp's malicious cyber activity involved a concerted effort to compromise UK health,
+government and public sector institutions and commercial technology companies, for financial gain, undermined or was intended to
+undermine the integrity, prosperity and security of the United Kingdom and its allies. (Gender):Male Listed on: 01/10/2024 UK Sanctions
+List Date Designated: 01/10/2024 Last Updated: 08/10/2024 Group ID: 16586.
+51. Name 6: SHEVCHENKO 1: VITALY 2: ALEKSANDROVICH 3: n/a 4: n/a 5: n/a.
+Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0081. (UK Statement of Reasons):Russian GRU 29155 associate
+Vitaly Aleksandrovich SHEVCHENKO, through his prior involvement with a GRU cyber unit, has been responsible for, engaging in,
+providing support for, or promoting the commissions, planning or preparation of relevant cyber activity. Such activity that SHEVCHENKO
+is or has been involved in undermines, or is intended to undermine, the integrity, prosperity or security of United Kingdom or a country other
+than the United Kingdom. (Gender):Male Listed on: 18/07/2025 UK Sanctions List Date Designated: 18/07/2025 Last Updated:
+18/07/2025 Group ID: 17013.
+52. Name 6: SHIKOLENKO 1: YURIY 2: LEONIDOVICH 3: n/a 4: n/a 5: n/a.
+Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0079. (UK Statement of Reasons):Russian GRU Senior Officer
+Colonel Yuriy Leonidovich SHIKOLENKO is or has been responsible for, engaging in, providing support for, or promoting the
+commission, planning or preparation of relevant cyber activity. Additionally, SHIKOLENKO remains associated with, a person who is or
+has been so involved, by reason of his continuing service in the GRU. The relevant cyber activity in which SHIKOLENKO is or has been
+involved undermines, or was intended to undermine, the integrity, prosperity or security of the United Kingdom or a country other than the
+United Kingdom. Listed on: 18/07/2025 UK Sanctions List Date Designated: 18/07/2025 Last Updated: 18/07/2025 Group ID:
+17012.
+53. Name 6: SIDOROV 1: ILYA 2: VLADIMIROVICH 3: n/a 4: n/a 5: n/a.
+DOB: 01/03/1992. POB: Altayskiy Kray, Russia a.k.a: (1) SID3RUN (2) SIDOR3RUN (3) SIDOROV, Ilia,
+Vladimirovich Nationality: Russia Passport Number: 762246348 Other Information: (UK Sanctions List Ref):CYB0068. (UK
+Statement of Reasons):Ilya Vladimirovich SIDOROV is an involved person through his role in and association with ZSERVERS, an
+involved person identified as a key enabler of the cybercrime ecosystem. In this capacity, Ilya Vladimirovich SIDOROV was directly
+involved in the supply of goods or technology that could contribute to relevant cyber activity. Ilya Vladimirovich SIDOROV is therefore
+involved in enabling cybercrime. In this role, Ilya Vladimirovich SIDOROV was involved in relevant cyberactivity that, directly or indirectly
+caused, or was intended to cause, economic loss to, or prejudice to the commercial interests of, those affected by the activity.
+(Gender):Male Listed on: 11/02/2025 UK Sanctions List Date Designated: 11/02/2025 Last Updated: 11/02/2025 Group ID:
+16750.
+54. Name 6: SLOBODSKOY 1: DMITRY 2: ALEKSEYEVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Дмитрий Алексеевич СЛОБОДСКОЙ
+DOB: 28/07/1988. Other Information: (UK Sanctions List Ref):CYB0055. (UK Statement of Reasons):Dmitry Alekseyevich
+SLOBODSKOY is a member of Evil Corp, and has been involved in relevant cyber activity, including being responsible for, engaging in
+and providing support for malicious cyber activity that resulted in the unauthorised access and exfiltration of sensitive data from UK
+infrastructure and networks. Dmitry SLOBODSKOY is associated with Aleksandr RYZHENKOV who was a senior member and
+manager of Evil Corp, and was involved in the development and deployment of ransomware that was used by Evil Corp to carry out its
+relevant cyber activity. Evil Corp's malicious cyber activity involved a concerted effort to compromise UK health, government and public
+sector institutions, and commercial technology companies, for financial gain, undermined or was intended to undermine the integrity,
+prosperity and security of the United Kingdom and its allies. (Gender):Male Listed on: 01/10/2024 UK Sanctions List Date
+Designated: 01/10/2024 Last Updated: 08/10/2024 Group ID: 16581.
+55. Name 6: SLOBODSKOY 1: KIRILL 2: ALEKSEYEVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Кирилл Алексеевич СЛОБОДСКОЙ
+DOB: 26/02/1987. Other Information: (UK Sanctions List Ref):CYB0056. (UK Statement of Reasons):Kirill Alekseyevich
+SLOBODSKOY is a member of Evil Corp, and has been involved in relevant cyber activity, including being responsible for, engaging in
+and providing support for malicious cyber activity that resulted in the unauthorised access and exfiltration of sensitive data from UK
+infrastructure and networks. Kirill SLOBODSKOY was involved in activity on a cybercrime forum on behalf of the group. Evil Corp’s
+malicious cyber activity involved a concerted effort to compromise UK health, government and public sector institutions, and commercial
+technology companies, for financial gain, which undermined or was intended to undermine the integrity, prosperity and security of the United
+Kingdom and its allies. (Gender):Male Listed on: 01/10/2024 UK Sanctions List Date Designated: 01/10/2024 Last Updated:
+01/10/2024 Group ID: 16582.
+56. Name 6: SMIRNOV 1: DMITRY 2: KONSTANTINOVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Дмитрий Константинович СМИРНОВ
+DOB: 10/11/1987. Other Information: (UK Sanctions List Ref):CYB0051. (UK Statement of Reasons):Dmitry Konstantinovich
+SMIRNOV is a member of Evil Corp, and has been involved in relevant cyber activity, including being responsible for, engaging in and
+providing support for malicious cyber activity that resulted in the unauthorised access and exfiltration of sensitive data from UK infrastructure
+and networks. He has also provided financial services that could contribute to relevant cyber activity. Dmitry SMIRNOV was involved in
+laundering the proceeds for Evil Corp's cyber activity, and other financial activities including the coordination of payment for those involved
+in developing and maintaining Evil Corp’s tools and infrastructure. Evil Corp's malicious cyber activity involved a concerted effort to
+compromise UK health, government and public sector institutions, and commercial technology companies, for financial gain, which
+undermined or was intended to undermine the integrity, prosperity and security of the United Kingdom and its allies. (Gender):Male Listed
+on: 01/10/2024 UK Sanctions List Date Designated: 01/10/2024 Last Updated: 01/10/2024 Group ID: 16588.
+57. Name 6: SOTONIKOV 1: OLEG 2: MIKHAYLOVICH 3: n/a 4: n/a 5: n/a.
+
+--- Page 9 ---
+
+DOB: 24/08/1972. POB: Oeljanovsk, Russia Nationality: Russia Passport Number: 120018866 Address: Moscow, Russia.Position:
+HUMINT Support (GRU) Other Information: (UK Sanctions List Ref):CYB0008. (UK Statement of Reasons):Oleg Mijailovich
+Sotnikov was part of a team of intelligence officers of the Russian General Staff Main Intelligence Directorate (GRU) unit known as field
+post number 26165 that attempted to gain unauthorised access to the information systems of the Organisation for the Prohibition of
+Chemical Weapons (OPCW) in April 2018. The Netherlands authorities disrupted the cyber attack before it was successful. This attempted
+relevant cyber activity was intended to undermine the independence or effective functioning of an international organisation (Gender):Male
+Listed on: 31/07/2020 UK Sanctions List Date Designated: 31/12/2020 Last Updated: 31/12/2020 Group ID: 13908.
+58. Name 6: TSAREV 1: MIKHAIL 2: n/a 3: n/a 4: n/a 5: n/a.
+DOB: 20/04/1989. a.k.a: (1) FRANCES (2) KHANO (3) MANGO Nationality: Russia Other Information: (UK Sanctions List
+Ref):CYB0037. (UK Statement of Reasons):Mikhail TSAREV is or has been involved in relevant cyber activity, including being responsible
+for, engaging in providing support for, or promoting the commission, planning or preparation of relevant cyber activity; and providing
+technical assistance that could contribute to relevant cyber activity, namely ransomware attacks which undermined, or were intended to
+undermine, the integrity, prosperity and security of the United Kingdom and other countries, and were intended to cause economic loss to,
+or prejudice the commercial interests of, those companies affected by the activity. Specifically, Mikhail TSAREV was a mid-level manager
+who assisted with the Group's finances and overseeing of HR functions. (Gender):Male Listed on: 07/09/2023 UK Sanctions List Date
+Designated: 07/09/2023 Last Updated: 07/09/2023 Group ID: 16079.
+59. Name 6: TUCHKOV 1: IVAN 2: DMITRIYEVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Иван Дмитриевич ТУЧКОВ
+DOB: 27/11/1986. Other Information: (UK Sanctions List Ref):CYB0053. (UK Statement of Reasons):Ivan Dmitryevich TUCHKOV
+is a member of Evil Corp, and is associated with Maksim YAKUBETS who was involved in relevant cyber activity through his leadership of
+Evil Corp. Evil Corp's malicious cyber activity involved a concerted effort to compromise UK health, government and public sector
+institutions, and commercial technology companies, for financial gain, which undermined or was intended to undermine the integrity,
+prosperity and security of the United Kingdom and its allies. (Gender):Male Listed on: 01/10/2024 UK Sanctions List Date
+Designated: 01/10/2024 Last Updated: 01/10/2024 Group ID: 16579.
+60. Name 6: TURASHEV 1: IGOR 2: OLEGOVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Игорь Олегович ТУРАШЕВ
+DOB: 15/06/1981. a.k.a: (1) ENKI (2) NINTUTU Other Information: (UK Sanctions List Ref):CYB0049. (UK Statement of
+Reasons):Igor Olegovich TURASHEV is a member of Evil Corp, and has been involved in relevant cyber activity, including being
+responsible for, engaging in and providing support for malicious cyber activity that resulted in the unauthorised access and exfiltration of
+sensitive data from UK infrastructure and networks. He has also provided technical assistance that could contribute to relevant cyber
+activity. Igor TURASHEV was involved in malware and ransomware operations. Evil Corp's malicious cyber activity involved a concerted
+effort to compromise UK health, government and public sector institutions, and commercial technology companies, for financial gain, which
+undermined or was intended to undermine the integrity, prosperity and security of the United Kingdom and its allies. (Gender):Male Listed
+on: 01/10/2024 UK Sanctions List Date Designated: 01/10/2024 Last Updated: 01/10/2024 Group ID: 16585.
+61. Name 6: VAKHROMEYEV 1: IVAN 2: VASILYEVICH 3: n/a 4: n/a 5: n/a.
+DOB: 29/12/1988. a.k.a: (1) IVANALERT (2) MUSHROOM (3) VAKHROMEEV, Ivan, Vasilievich Nationality: Russia Other
+Information: (UK Sanctions List Ref):CYB0028. (UK Statement of Reasons):Ivan Vasilyevich VAKHROMEYEV is or has been
+involved in relevant cyber activity, including being responsible for, engaging in, providing support for, or promoting the commission, planning
+or preparation of relevant cyber activity; and providing technical assistance that could contribute to relevant cyber activity, namely
+ransomware attacks which were intended to undermine the integrity, prosperity and security of the United Kingdom and other countries, and
+were intended to cause economic loss to, or prejudice the commercial interests of, those companies affected by the activity. Listed on:
+09/02/2023 UK Sanctions List Date Designated: 09/02/2023 Last Updated: 09/02/2023 Group ID: 15743.
+62. Name 6: VALIAKHMETOV 1: VADYM 2: FIRDAVYSOVYCH 3: n/a 4: n/a 5: n/a.
+DOB: 07/05/1981. a.k.a: (1) MENTOS (2) VALIAKHMETOV, Vadim, Firdavysovych (3) VASM (4) WELDON Nationality:
+Russia Other Information: (UK Sanctions List Ref):CYB0039. (UK Statement of Reasons):Vadym Firdavysovych VALIAKHMETOV
+is or has been involved in relevant cyber activity, including being responsible for, engaging in providing support for, or promoting the
+commission, planning or preparation of relevant cyber activity; and providing technical assistance that could contribute to relevant cyber
+activity, namely ransomware attacks which undermined, or were intended to undermine, the integrity, prosperity and security of the United
+Kingdom and other countries, and were intended to cause economic loss to, or prejudice the commercial interests of, those companies
+affected by the activity. Specifically, Vadym Firdavysovych VALIAKHMETOV worked as a coder and his duties included backdoor and
+loader projects. (Gender):Male Listed on: 07/09/2023 UK Sanctions List Date Designated: 07/09/2023 Last Updated: 07/09/2023
+Group ID: 16081.
+63. Name 6: VASYUK 1: SERGEY 2: SERGEYEVICH 3: n/a 4: n/a 5: n/a.
+Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0091. (UK Statement of Reasons):As a member of GRU Unit
+26165, Sergey Sergeyevich VASYUK has been involved in relevant cyber activity in that he was responsible for, engaging in, providing
+support for, or promoting the commissioning, planning or preparation of relevant cyber activity. Such activity that Sergey Sergeyevich
+VASYUK has been involved in, or is intended to undermine, the integrity, prosperity or security of the United Kingdom or a country other
+than the United Kingdom. (Gender):Male Listed on: 18/07/2025 UK Sanctions List Date Designated: 18/07/2025 Last Updated:
+18/07/2025 Group ID: 16997.
+64. Name 6: YAKUBETS 1: MAKSIM 2: VIKTOROVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Максим Викторович ЯAКУБЕЦ
+DOB: 20/05/1987. a.k.a: AQUA Other Information: (UK Sanctions List Ref):CYB0048. (UK Statement of Reasons):Maksim
+
+--- Page 10 ---
+
+Viktorovich YAKUBETS is a member of Evil Corp, and has been involved in relevant cyber activity, including being responsible for,
+engaging in and providing support for malicious cyber activity that resulted in the unauthorised access and exfiltration of sensitive data from
+UK infrastructure and networks. Maksim YAKUBETS was a central figure in the administration and leadership of Evil Corp and was
+responsible for managing and overseeing the group's malicious cyber activities. Additionally, Maksim YAKUBETS was involved in the
+development of Evil Corp's malware and ransomware strains. Evil Corp's malicious cyber activity involved a concerted effort to
+compromise UK health, government and public sector institutions, and commercial technology companies, for financial gain, which
+undermined or was intended to undermine the integrity, prosperity and security of the United Kingdom and its allies. (Gender):Male Listed
+on: 01/10/2024 UK Sanctions List Date Designated: 01/10/2024 Last Updated: 08/10/2024 Group ID: 16583.
+65. Name 6: YAKUBETS 1: ARTEM 2: VIKTOROVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Артем Викторович ЯAКУБЕЦ
+DOB: 17/01/1986. Other Information: (UK Sanctions List Ref):CYB0052. (UK Statement of Reasons):Artem Viktorovich
+YAKUBETS is a member of Evil Corp, and is associated with Maksim YAKUBETS who was involved in relevant cyber activity through
+his leadership of Evil Corp; and Dmitry SMIRNOV and Aleksey SHCHETININ who were involved in relevant cyber activity through their
+facilitation of financial and money laundering activity for Evil Corp. Evil Corp's malicious cyber activity involved a concerted effort to
+compromise UK health, government and public sector institutions, and commercial technology companies, for financial gain, undermined or
+was intended to undermine the integrity, prosperity and security of the United Kingdom and its allies. (Gender):Male Listed on:
+01/10/2024 UK Sanctions List Date Designated: 01/10/2024 Last Updated: 01/10/2024 Group ID: 16589.
+66. Name 6: YAKUBETS 1: VIKTOR 2: GRIGORYEVICH 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): Виктор Григорьевич ЯAКУБЕЦ
+DOB: 19/02/1964. Other Information: (UK Sanctions List Ref):CYB0060. (UK Statement of Reasons):Viktor Grigoryevich
+YAKUBETS is a member of Evil Corp, and is associated with Maksim YAKUBETS who has been involved in relevant cyber activity
+through his leadership of Evil Corp; and Dmitry SMIRNOV who was involved in relevant cyber activity through his facilitation of money
+laundering activity for Evil Corp. Evil Corp's malicious cyber activity involved a concerted effort to compromise UK health, government and
+public sector institutions, and commercial technology companies, for financial gain, undermined or was intended to undermine the integrity,
+prosperity and security of the United Kingdom and its allies. (Gender):Male Listed on: 01/10/2024 UK Sanctions List Date
+Designated: 01/10/2024 Last Updated: 01/10/2024 Group ID: 16591.
+67. Name 6: YERMAKOV 1: IVAN 2: SERGEYEVICH 3: n/a 4: n/a 5: n/a.
+Nationality: Russia Other Information: (UK Sanctions List Ref):CYB0089. (UK Statement of Reasons):As a member of GRU Unit
+26165, Ivan Sergeyevich YERMAKOV has been involved in relevant cyber activity in that he was responsible for, engaging in, providing
+support for, or promoting the commissioning, planning or preparation of relevant cyber activity, including the targeting of Yuliya Skripal with
+X-Agent. Such activity that Ivan Sergeyevich YERMAKOV has been involved in, or is intended to undermine, the integrity, prosperity or
+security of the United Kingdom or a country other than the United Kingdom. (Gender):Male Listed on: 18/07/2025 UK Sanctions List
+Date Designated: 18/07/2025 Last Updated: 18/07/2025 Group ID: 16999.
+68. Name 6: ZHANG 1: SHILONG 2: n/a 3: n/a 4: n/a 5: n/a.
+DOB: 10/09/1981. a.k.a: BAOBEILONG Nationality: China Other Information: (UK Sanctions List Ref):CYB0002. (UK Statement
+of Reasons):Zhang Shilong was involved in relevant cyber activity through his employment with Huaying Haitai, and therefore being
+responsible for, engaging in, providing support for, or promoting the commission, planning or preparation of relevant cyber activity.
+(Gender):Male Listed on: 31/07/2020 UK Sanctions List Date Designated: 31/12/2020 Last Updated: 31/12/2020 Group ID:
+13904.
+69. Name 6: ZHAO 1: GUANGZONG 2: n/a 3: n/a 4: n/a 5: n/a.
+Name (non-Latin script): 赵光宗
+DOB: 12/11/1985. POB: Jingzhou Municipality, China Nationality: China National Identification Number:
+421003198511121539 Address: Hubei Province, China.Other Information: (UK Sanctions List Ref):CYB0045. (UK Statement of
+Reasons):ZHAO Guangzong, a member of Advanced Persistent Threat Group 31 (APT31), is, or has been, involved in relevant cyber
+activity, including being responsible for, engaging in, or providing support for the commission, planning, or preparation of relevant cyber
+activity. This included the preparation for, and/or the provision of support to, sophisticated cyber activity, including spear-phishing
+campaigns and information systems interference which resulted in the unauthorised access to, and exfiltration of, sensitive data. Such
+campaigns included cyber activities targeting officials, government entities and parliamentarians conducted by APT31 against such
+individuals in the UK and internationally. As such, ZHAO Guangzong, is a member, and an involved person in the activity of the APT31
+group operating on behalf of the Chinese Ministry of State Security (MSS) as part of the PRC’s state-sponsored apparatus and himself has
+engaged in relevant cyber activity, in support of malicious cyber activity that targeted officials, government entities and parliamentarians. This
+action undermined, or was intended to undermine, the integrity, prosperity and security of UK and international organisations and individuals
+engaged in political and democratic processes. (Gender):Male Listed on: 25/03/2024 UK Sanctions List Date Designated:
+25/03/2024 Last Updated: 25/03/2024 Group ID: 16461.
+70. Name 6: ZHUYKOV 1: ANDREY 2: YURYEVICH 3: n/a 4: n/a 5: n/a.
+DOB: 18/02/1982. a.k.a: (1) ADAM (2) DEFENDER (3) DIF Nationality: Russia Other Information: (UK Sanctions List
+Ref):CYB0040. (UK Statement of Reasons):Andrey Yuryevich ZHUYKOV is or has been involved in relevant cyber activity, including
+being responsible for, engaging in providing support for, or promoting the commission, planning or preparation of relevant cyber activity; and
+providing technical assistance that could contribute to relevant cyber activity, namely ransomware attacks which undermined, or were
+intended to undermine, the integrity, prosperity and security of the United Kingdom and other countries, and were intended to cause
+economic loss to, or prejudice the commercial interests of, those companies affected by the activity. Specifically, Andrey Yuryevich
+ZHUYKOV was a central actor in the Group and a senior administrator. (Gender):Male Listed on: 07/09/2023 UK Sanctions List Date
+Designated: 07/09/2023 Last Updated: 07/09/2023 Group ID: 16082.
+
+--- Page 11 ---
+
+ENTITIES
+1. Organisation Name: 161ST SPECIALIST TRAINING CENTRE (TSPS)
+a.k.a: GRU Unit 29155 Other Information: (UK Sanctions List Ref):CYB0097. (UK Statement of Reasons):The 161st Specialist
+Training Centre (TsPS) (Unit 29155) of the Russian General Staff of the Armed Forces of the Russian Federation (GRU), is involved in
+relevant cyber acitivty in that it has been responsible for, engaging in, providing support for, or promoting the commission, planning or
+preparation or relevant cyber acitivty, including information system and data interference such as hacking and leaking of sensitive
+information, defacement of websites, espionage through the collection of data, and sabotage through the destruction of data, including by
+deploying WhisperGate malware. These activities undermine, or are intended to undermine, the integrity, prosperity or security of the United
+Kingdom or a country other than the United Kingdom. Listed on: 18/07/2025 UK Sanctions List Date Designated: 18/07/2025 Last
+Updated: 18/07/2025 Group ID: 16991.
+2. Organisation Name: 85TH MAIN SPECIAL SERVICE CENTRE (GTSSS)
+a.k.a: (1) APT28 (Advanced Persistent Threat) (2) FANCY BEAR (3) GRU Unit 26165 (4) Iron Twilight (5) Pawn
+Storm (6) Sednit (7) Sofacy Group (8) STRONTIUM (9) Threat Group-4127/Iron Twilight (10) Tsar Team Address: Komsomol'skiy
+Prospekt, 20 Moscow, Russia, 119146.Other Information: (UK Sanctions List Ref):CYB0012. (UK Statement of Reasons):The 85th
+Main Special Services Centre (GTsSS) (Unit 26165) of the Russian General Staff of the Armed Forces of the Russian Federation (GRU),
+is involved in relevant cyber activity in that it has been responsible for, engaging in, providing support for, or promoting the commission,
+planning or preparation or relevant cyber activity, including the deployment of X-Agent malware. These activities undermine, or are intended
+to undermine, the integrity, prosperity or security of the United Kingdom or a country other than the United Kingdom. (Type of
+entity):Department within Government (Parent company):Russian Ministry of Defence Listed on: 23/10/2020 UK Sanctions List Date
+Designated: 31/12/2020 Last Updated: 18/07/2025 Group ID: 13984.
+3. Organisation Name: CENTRAL SCIENTIFIC RESEARCH INSTITUTE OF CHEMISTRY AND MECHANICS
+a.k.a: (1) GNTs RF FGUP TsNIIKhM (2) NIII6 (3) Scientific Research Institute No 6 (4) State Research Centre of the Russian
+Federation Federal State Unitary Enterprise Central Scientific Research Institute for Chemistry and
+Mechanics (5) TsNIIKhM Address: 16a Nagatinskaya Street, Moscow, Russia.Other Information: (UK Sanctions List
+Ref):CYB0022. (UK Statement of Reasons):The Central Scientific Research Institute of Chemistry and Mechanics (TsNIIKhM) was
+responsible for a cyber attack on a petro-chemical company in August 2017. The cyber attack gained remote access to the Safety
+Instrumented Systems connected to the Industrial Control System of a petrochemical refinery. This shut down the plant for over a week.
+There is evidence to suggest that the shutdown was inadvertent while TsNIIKhM were attempting to cause a highly dangerous physical
+consequence through disabling the safety systems, which could have included an explosion. These actions caused economic loss and
+prejudice to commercial interests and/or was intended to undermine the security and prosperity of a country other than the United Kingdom.
+(Type of entity):Government-owned technical research institution Listed on: 24/03/2022 UK Sanctions List Date Designated:
+24/03/2022 Last Updated: 24/03/2022 Group ID: 15044.
+4. Organisation Name: CHOSUN EXPO (APT 38)
+a.k.a: (1) Chosen Expo (2) Korean Export Joint Venture Address: North Korea.Other Information: (UK Sanctions List
+Ref):CYB0004. (UK Statement of Reasons):The Lazarus Group was responsible for relevant cyber activity that resulted in data interference
+which directly or indirectly caused, or is intended to cause, economic loss to, or prejudice to the commercial interests of, those affected by
+the activity through stealing money from Bangladesh Bank, attempting to steal money from Vietnam Tien Phong Bank and targeting the
+Polish Financial Conduct Authority information systems. Through the WannaCry attack they undermined the integrity of the United Kingdom
+through interfering with an information system so that it prevented the provision of essential healthcare services to the population. (Type of
+entity):Company (Subsidiaries):Reconnaissance General Bureau Listed on: 31/07/2020 UK Sanctions List Date Designated:
+31/12/2020 Last Updated: 31/12/2020 Group ID: 13910.
+5. Organisation Name: MAIN CENTRE FOR SPECIAL TECHNOLOGIES (GTSST) ('SANDWORM')
+a.k.a: (1) BlackEnergy Group (2) GRU Unit 74455 (3) Olympic Destroyer (4) Quedagh (5) Sandworm Team (6) Telebots (7) Voodoo
+Bear Address: 22 Kirova Street, Moscow, Russia.Other Information: (UK Sanctions List Ref):CYB0009. (UK Statement of
+Reasons):The Main Centre for Special Technologies (GTsST) (Unit 74455) of the Russian General Staff Main Intelligence Directorate
+(GRU) is involved in relevant cyber activity in that it is or has been responsible for, engaging in, providing support for, or promoting the
+commission, planning or preparation of relevant cyber activity, including the deployment of multiple variations of Industroyer malware and
+NotPetya malware. These activities undermine, or are intended to undermine, the integrity, prosperity or security of the United Kingdom or
+a country other than the United Kingdom or directly or indirectly causes, or is intended to cause, economic loss to, or prejudice to the
+commercial interests of, those affected by the activity. (Type of entity):Department within Government/Military Unit (Parent
+company):Russian Ministry of Defence Listed on: 31/07/2020 UK Sanctions List Date Designated: 31/12/2020 Last Updated:
+18/07/2025 Group ID: 13911.
+6. Organisation Name: TIANJIN HUAYING HAITAI SCIENCE AND TECHNOLOGY DEVELOPMENT CO. LTD
+a.k.a: (1) APT10 (2) CVNX (3) Haitai Technology Development Co. Ltd (4) MenuPass (5) Potassium (6) Red Apollo (7) Stone
+Panda Other Information: (UK Sanctions List Ref):CYB0003. (UK Statement of Reasons):Huaying Haitai, known in cyber security
+circles as APT10 (Advanced Persistent Threat 10), Red Apollo, CVNX, Stone Panda, MenuPass and Potassium, was involved in relevant
+cyber activity Operation Cloud Hopper, one of the most significant and widespread cyber instructions to date. They conducted data
+interference through the theft of intellectual property and sensitive commercial data over many years. Huaying Haitai targeted companies
+across six continents and sectors banking and finance, government, aviation, space, and satellite technology, manufacturing technology,
+medical, oil and gas, mining, communications technology, computer processing technology, and defence technology. This activity
+undermined the prosperity of the United Kingdom and countries other than the United Kingdom (Website):huayinghaitai.com (Type of
+entity):Company Listed on: 31/07/2020 UK Sanctions List Date Designated: 31/12/2020 Last Updated: 31/12/2020 Group ID:
+
+--- Page 12 ---
+
+13909.
+7. Organisation Name: WUHAN XIAORUIZHI SCIENCE AND TECHNOLOGY COMPANY LIMITED
+Name (non-Latin script): 武汉晓睿智科技有限责任公司
+Address: 2nd Floor, No. 16, Huashiyuan North Road, East Lake New Technology Development Zone, Hubei Province, Wuhan,
+China.Other Information: (UK Sanctions List Ref):CYB0044. (UK Statement of Reasons):WUHAN XIAORUIZHI SCIENCE AND
+TECHNOLOGY COMPANY LIMITED is associated with Advanced Persistent Threat Group 31 (APT31) and is, or has been, involved
+in relevant cyber activity, including being responsible for, engaging in, or providing support for the commission, planning, or preparation of
+relevant cyber activity on behalf of the Chinese State. This included the preparation for, and/or the provision of support to, sophisticated
+cyber activity, including spear-phishing campaigns and information systems interference which resulted in the unauthorised access to, and
+exfiltration of, sensitive data. Such campaigns included cyber activities targeting officials, government entities and parliamentarians conducted
+by APT31 against such individuals in the UK and internationally. As such, WUHAN XIAORUIZHI SCIENCE AND TECHNOLOGY
+COMPANY LIMITED, is an associated person in the activity of the APT31 group operating on behalf of the Chinese Ministry of State
+Security (MSS) as part of the PRC’s state-sponsored apparatus and itself has engaged in relevant cyber activity, in support of malicious
+cyber activity that targeted officials, government entities and parliamentarians. This action undermined, or was intended to undermine, the
+integrity, prosperity and security of UK and international organisations and individuals engaged in political and democratic processes. (Type
+of entity):Company Listed on: 25/03/2024 UK Sanctions List Date Designated: 25/03/2024 Last Updated: 25/03/2024 Group ID:
+16460.
+8. Organisation Name: XHOST INTERNET SOLUTIONS LP
+a.k.a: (1) ISXHost (2) XHost Other Information: (UK Sanctions List Ref):CYB0065. (UK Statement of Reasons):XHOST
+INTERNET SOLUTIONS LP ('XHOST') has been involved in relevant cyber activity, in that it is owned or controlled by and is acting on
+behalf or at the direction of ZSERVERS, which is involved in relevant cyber activity through the provision of hosting services that support
+such activity. XHOST has provided support for the commission, planning or preparation of relevant cyber activity, has supplied technology
+that could contribute to such activity, and has carried out activities which promoted, enabled or facilitated the commission of relevant cyber
+activity, by providing hosting services that support such activity. Further, XHOST was established to support and obfuscate relevant cyber
+activity by ZSERVERS, a Russian-based provider of bulletproof hosting services. Such activity that XHOST was involved in, directly or
+indirectly caused, or is intended to cause, economic loss to, or prejudice to the commercial interests of, those affected by the activity.
+(Website):isxhost.uk Listed on: 11/02/2025 UK Sanctions List Date Designated: 11/02/2025 Last Updated: 11/02/2025 Group
+ID: 16747.
+9. Organisation Name: ZSERVERS
+a.k.a: Zservers Address: 32 Jubileinaia, Barnaul, Altai Kray, Russia, 656902.Other Information: (UK Sanctions List Ref):CYB0064.
+Incorporation date: 2/25/2011 (UK Statement of Reasons):ZSERVERS has been involved in relevant cyber activity, in that by providing
+hosting services that support relevant cyber activity it has provided support for the commission, planning or preparation of such activity, has
+supplied technology and provided technical assistance that could contribute to such activity, and has carried out activities which promoted,
+enabled or facilitated the commission of relevant cyber activity. ZSERVERS has operated from Barnaul, Russia and has promoted itself as a
+Bulletproof Hosting (BPH) provider. ZSERVERS has been involved in relevant cyber activity though its role providing infrastructure used in
+ransomware incidents and reprovisioning infrastructure for customers identified as being involved in malicious cyber activity, including those
+affiliated with the LockBit ransomware group. ZSERVERS infrastructure was used to host a ransomware-dedicated site connected with the
+leak of private information stolen from Australian health insurance company Medibank Private Limited. ZSERVERS has been identified as a
+key enabler of the cybercrime ecosystem. Such activity that ZSERVERS was involved in, directly or indirectly caused, or was intended to
+cause, economic loss to, or prejudice to the commercial interests of those affected by the activity. (Website): Zservers.ru Listed on:
+11/02/2025 UK Sanctions List Date Designated: 11/02/2025 Last Updated: 11/02/2025 Group ID: 16746.
+
+--- Page 13 ---
