@@ -6,6 +6,7 @@ Uses OpenAI's structured output feature with Pydantic models.
 import os
 import json
 import re
+import time
 from typing import Tuple, Optional, List
 from datetime import datetime
 from pathlib import Path
@@ -15,6 +16,7 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 
 from models import SanctionedIndividual, IndividualsList, SanctionedEntity, EntitiesList
+from logger_config import pipeline_logger
 
 
 # Load environment variables
@@ -36,7 +38,18 @@ class LLMExtractor:
             raise ValueError("OpenAI API key must be provided or set in OPENAI_API_KEY environment variable")
 
         self.client = OpenAI(api_key=self.api_key)
-        self.model = "gpt-4o-mini"  # Using the recommended model for structured outputs
+        self.model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+
+        # Performance and cost tracking
+        self.api_calls_made = 0
+        self.total_input_tokens = 0
+        self.total_output_tokens = 0
+        self.processing_times = []
+        self.extraction_errors = 0
+
+        # Output file paths for incremental saving
+        self.individuals_output_path = None
+        self.entities_output_path = None
 
     def _split_individuals_text(self, text: str) -> List[str]:
         """
@@ -81,7 +94,7 @@ class LLMExtractor:
                 individual_text = splits[i] + splits[i + 1]
                 individuals.append(individual_text.strip())
 
-        print(f"Split text into {len(individuals)} individual records")
+        pipeline_logger.info(f"📄 Split text into {len(individuals)} individual records")
         return individuals
 
     def _split_entities_text(self, text: str) -> List[str]:
@@ -121,8 +134,56 @@ class LLMExtractor:
                 entity_text = splits[i] + splits[i + 1]
                 entities.append(entity_text.strip())
 
-        print(f"Split text into {len(entities)} entity records")
+        pipeline_logger.info(f"🏢 Split text into {len(entities)} entity records")
         return entities
+
+    def _initialize_output_files(self, output_dir: str = "output"):
+        """
+        Initialize empty JSON array files for incremental saving.
+
+        Args:
+            output_dir: Directory to create output files in
+        """
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+
+        self.individuals_output_path = output_path / "individuals_extracted.json"
+        self.entities_output_path = output_path / "entities_extracted.json"
+
+        # Initialize empty JSON arrays
+        with open(self.individuals_output_path, 'w', encoding='utf-8') as f:
+            json.dump([], f)
+
+        with open(self.entities_output_path, 'w', encoding='utf-8') as f:
+            json.dump([], f)
+
+        pipeline_logger.info(f"📁 Initialized output files:")
+        pipeline_logger.info(f"   • {self.individuals_output_path}")
+        pipeline_logger.info(f"   • {self.entities_output_path}")
+
+    def _append_to_json_file(self, file_path: Path, new_record: dict):
+        """
+        Safely append a new record to a JSON array file.
+
+        Args:
+            file_path: Path to the JSON file
+            new_record: Record to append
+        """
+        try:
+            # Read existing data
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+
+            # Append new record
+            data.append(new_record)
+
+            # Write back to file
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+
+        except Exception as e:
+            pipeline_logger.error(f"Error appending to {file_path}: {e}")
+            raise
 
     def extract_individuals(self, text: str) -> IndividualsList:
         """
@@ -135,14 +196,18 @@ class LLMExtractor:
         Returns:
             IndividualsList containing all extracted individuals
         """
-        print("Extracting individuals using LLM...")
-
         # Split text into individual records
         individual_texts = self._split_individuals_text(text)
 
         if not individual_texts:
-            print("No individual records found in text")
+            pipeline_logger.warning("No individual records found in text")
             return IndividualsList(individuals=[], totalCount=0, extractionDate=datetime.now().isoformat())
+
+        pipeline_logger.info(f"🤖 Starting LLM extraction for {len(individual_texts)} individuals")
+        pipeline_logger.info(f"🔧 Using model: {self.model}")
+
+        # Initialize output files for incremental saving
+        self._initialize_output_files()
 
         system_prompt = """You are a data extraction specialist for UK sanctions lists.
         Extract the INDIVIDUAL from the provided text record. This text contains exactly ONE individual record.
@@ -178,9 +243,14 @@ class LLMExtractor:
         """
 
         all_individuals = []
+        successful_extractions = 0
+        start_time = time.time()
 
         for i, individual_text in enumerate(individual_texts, 1):
-            print(f"Processing individual record {i}/{len(individual_texts)}")
+            record_start_time = time.time()
+
+            # Progress tracking
+            pipeline_logger.progress(i, len(individual_texts), "individuals", f"Processing and saving record {i}")
 
             user_prompt = f"""Extract the sanctioned INDIVIDUAL from the following single record.
             Return structured data for this one individual.
@@ -197,17 +267,80 @@ class LLMExtractor:
                         {"role": "user", "content": user_prompt}
                     ],
                     response_format=IndividualsList,
-                    temperature=0,  # Use deterministic output
-                    max_tokens=16000
+                    # temperature=0,  # Use deterministic output
+                    # max_tokens=16000
                 )
+
+                # Track API usage
+                self.api_calls_made += 1
+                if hasattr(response, 'usage'):
+                    self.total_input_tokens += response.usage.prompt_tokens
+                    self.total_output_tokens += response.usage.completion_tokens
 
                 result = response.choices[0].message.parsed
                 # Add individuals from this extraction to our master list
                 all_individuals.extend(result.individuals)
+                successful_extractions += 1
+
+                # Save each individual to file immediately
+                for individual in result.individuals:
+                    self._append_to_json_file(self.individuals_output_path, individual.model_dump())
+
+                # Track processing time
+                record_time = time.time() - record_start_time
+                self.processing_times.append(record_time)
+
+                # Show detailed example for the first record (raw input vs structured output)
+                if i == 1 and result.individuals:
+                    individual = result.individuals[0]
+
+                    # Show raw input
+                    pipeline_logger.info("")
+                    pipeline_logger.info("🔍 EXAMPLE: Raw Input vs Structured Output")
+                    pipeline_logger.info("=" * 60)
+                    pipeline_logger.info("📄 RAW INPUT TEXT:")
+                    # Show first 300 characters of raw input
+                    raw_preview = individual_text[:300] + "..." if len(individual_text) > 300 else individual_text
+                    pipeline_logger.info(f"   {raw_preview}")
+
+                    pipeline_logger.info("")
+                    pipeline_logger.info("🤖 AI STRUCTURED OUTPUT:")
+                    structured_data = {
+                        "Name": f"{individual.firstName or ''} {individual.lastName or ''}".strip(),
+                        "Sanction ID": individual.sanctionId,
+                        "Nationality": individual.nationality,
+                        "Date of Birth": individual.dateOfBirth or "Not provided",
+                        "Passport Number": individual.passportNumber or "Not provided",
+                        "Group ID": individual.groupId,
+                        "Aliases": f"{len(individual.aliases)} aliases" if individual.aliases else "No aliases",
+                        "Address": individual.address.rawAddress if individual.address else "No address",
+                        "Statement Length": f"{len(individual.statementOfReasons)} characters" if individual.statementOfReasons else "No statement"
+                    }
+
+                    for key, value in structured_data.items():
+                        pipeline_logger.info(f"   • {key}: {value}")
+
+                    pipeline_logger.info(f"   • Processing time: {record_time:.2f}s")
+                    pipeline_logger.info("=" * 60)
+
+                # Show brief data for other early records
+                elif i <= 3 and result.individuals:
+                    individual = result.individuals[0]
+                    sample_data = {
+                        "Name": f"{individual.firstName or ''} {individual.lastName or ''}".strip(),
+                        "Sanction ID": individual.sanctionId,
+                        "Processing time": f"{record_time:.2f}s"
+                    }
+                    pipeline_logger.data_sample(f"Individual {i} Extracted", sample_data)
 
             except Exception as e:
-                print(f"Error extracting individual {i}: {e}")
+                self.extraction_errors += 1
+                pipeline_logger.error(f"Error extracting individual {i}: {str(e)}")
                 continue
+
+        # Calculate final metrics
+        total_time = time.time() - start_time
+        avg_time_per_record = sum(self.processing_times) / len(self.processing_times) if self.processing_times else 0
 
         # Create final result
         final_result = IndividualsList(
@@ -216,7 +349,18 @@ class LLMExtractor:
             extractionDate=datetime.now().isoformat()
         )
 
-        print(f"Successfully extracted {final_result.totalCount} individuals")
+        # Report extraction metrics
+        pipeline_logger.metrics("Individual Extraction Metrics", {
+            "Records processed": f"{len(individual_texts)}",
+            "Successful extractions": f"{successful_extractions}",
+            "Failed extractions": f"{self.extraction_errors}",
+            "Success rate": f"{(successful_extractions/len(individual_texts)*100):.1f}%",
+            "Total processing time": f"{total_time:.1f}s",
+            "Average time per record": f"{avg_time_per_record:.2f}s",
+            "API calls made": f"{self.api_calls_made}"
+        })
+
+        pipeline_logger.info(f"✅ Individual extraction completed: {final_result.totalCount} individuals extracted")
         return final_result
 
     def extract_entities(self, text: str) -> EntitiesList:
@@ -230,14 +374,14 @@ class LLMExtractor:
         Returns:
             EntitiesList containing all extracted entities
         """
-        print("Extracting entities using LLM...")
-
         # Split text into individual entity records
         entity_texts = self._split_entities_text(text)
 
         if not entity_texts:
-            print("No entity records found in text")
+            pipeline_logger.warning("No entity records found in text")
             return EntitiesList(entities=[], totalCount=0, extractionDate=datetime.now().isoformat())
+
+        pipeline_logger.info(f"🏢 Starting LLM extraction for {len(entity_texts)} entities")
 
         system_prompt = """You are a data extraction specialist for UK sanctions lists.
         Extract the ENTITY/ORGANIZATION from the provided text record. This text contains exactly ONE entity record.
@@ -274,9 +418,14 @@ class LLMExtractor:
         """
 
         all_entities = []
+        entity_successful_extractions = 0
+        entity_start_time = time.time()
 
         for i, entity_text in enumerate(entity_texts, 1):
-            print(f"Processing entity record {i}/{len(entity_texts)}")
+            entity_record_start_time = time.time()
+
+            # Progress tracking
+            pipeline_logger.progress(i, len(entity_texts), "entities", f"Processing and saving entity {i}")
 
             user_prompt = f"""Extract the sanctioned ENTITY/ORGANIZATION from the following single record.
             Return structured data for this one entity.
@@ -297,13 +446,75 @@ class LLMExtractor:
                     max_tokens=16000
                 )
 
+                # Track API usage
+                self.api_calls_made += 1
+                if hasattr(response, 'usage'):
+                    self.total_input_tokens += response.usage.prompt_tokens
+                    self.total_output_tokens += response.usage.completion_tokens
+
                 result = response.choices[0].message.parsed
                 # Add entities from this extraction to our master list
                 all_entities.extend(result.entities)
+                entity_successful_extractions += 1
+
+                # Save each entity to file immediately
+                for entity in result.entities:
+                    self._append_to_json_file(self.entities_output_path, entity.model_dump())
+
+                # Track processing time
+                entity_record_time = time.time() - entity_record_start_time
+                self.processing_times.append(entity_record_time)
+
+                # Show detailed example for the first entity record (raw input vs structured output)
+                if i == 1 and result.entities:
+                    entity = result.entities[0]
+
+                    # Show raw input
+                    pipeline_logger.info("")
+                    pipeline_logger.info("🔍 ENTITY EXAMPLE: Raw Input vs Structured Output")
+                    pipeline_logger.info("=" * 60)
+                    pipeline_logger.info("📄 RAW INPUT TEXT:")
+                    # Show first 300 characters of raw input
+                    entity_raw_preview = entity_text[:300] + "..." if len(entity_text) > 300 else entity_text
+                    pipeline_logger.info(f"   {entity_raw_preview}")
+
+                    pipeline_logger.info("")
+                    pipeline_logger.info("🤖 AI STRUCTURED OUTPUT:")
+                    entity_structured_data = {
+                        "Organization Name": entity.organizationName,
+                        "Entity Type": entity.entityType,
+                        "Sanction ID": entity.sanctionId,
+                        "Group ID": entity.groupId,
+                        "Aliases": f"{len(entity.aliases)} aliases" if entity.aliases else "No aliases",
+                        "Address": entity.address.rawAddress if entity.address else "No address",
+                        "Parent Company": entity.parentCompany or "None identified",
+                        "Statement Length": f"{len(entity.statementOfReasons)} characters" if entity.statementOfReasons else "No statement"
+                    }
+
+                    for key, value in entity_structured_data.items():
+                        pipeline_logger.info(f"   • {key}: {value}")
+
+                    pipeline_logger.info(f"   • Processing time: {entity_record_time:.2f}s")
+                    pipeline_logger.info("=" * 60)
+
+                # Show brief data for other early records
+                elif i <= 2 and result.entities:
+                    entity = result.entities[0]
+                    sample_data = {
+                        "Organization": entity.organizationName,
+                        "Entity Type": entity.entityType,
+                        "Sanction ID": entity.sanctionId,
+                        "Processing time": f"{entity_record_time:.2f}s"
+                    }
+                    pipeline_logger.data_sample(f"Entity {i} Extracted", sample_data)
 
             except Exception as e:
-                print(f"Error extracting entity {i}: {e}")
+                self.extraction_errors += 1
+                pipeline_logger.error(f"Error extracting entity {i}: {str(e)}")
                 continue
+
+        # Calculate final metrics
+        entity_total_time = time.time() - entity_start_time
 
         # Create final result
         final_result = EntitiesList(
@@ -312,7 +523,17 @@ class LLMExtractor:
             extractionDate=datetime.now().isoformat()
         )
 
-        print(f"Successfully extracted {final_result.totalCount} entities")
+        # Report extraction metrics
+        pipeline_logger.metrics("Entity Extraction Metrics", {
+            "Records processed": f"{len(entity_texts)}",
+            "Successful extractions": f"{entity_successful_extractions}",
+            "Failed extractions": f"{len(entity_texts) - entity_successful_extractions}",
+            "Success rate": f"{(entity_successful_extractions/len(entity_texts)*100):.1f}%",
+            "Total processing time": f"{entity_total_time:.1f}s",
+            "Additional API calls": f"{entity_successful_extractions}"
+        })
+
+        pipeline_logger.info(f"✅ Entity extraction completed: {final_result.totalCount} entities extracted")
         return final_result
 
     def extract_all(self, text: str) -> Tuple[IndividualsList, EntitiesList]:
@@ -329,15 +550,45 @@ class LLMExtractor:
         entities = self.extract_entities(text)
         return individuals, entities
 
+    def get_cost_estimate(self) -> dict:
+        """
+        Calculate estimated OpenAI API costs based on token usage.
+        Uses configurable pricing from environment variables.
+        """
+        # Get pricing from environment variables with defaults
+        input_cost_per_million = float(os.getenv("OPENAI_INPUT_COST_PER_MILLION", "0.150"))
+        output_cost_per_million = float(os.getenv("OPENAI_OUTPUT_COST_PER_MILLION", "0.600"))
+
+        input_cost = (self.total_input_tokens / 1_000_000) * input_cost_per_million
+        output_cost = (self.total_output_tokens / 1_000_000) * output_cost_per_million
+        total_cost = input_cost + output_cost
+
+        return {
+            "model_used": self.model,
+            "total_api_calls": self.api_calls_made,
+            "input_tokens": f"{self.total_input_tokens:,}",
+            "output_tokens": f"{self.total_output_tokens:,}",
+            "input_cost_per_1M": f"${input_cost_per_million:.3f}",
+            "output_cost_per_1M": f"${output_cost_per_million:.3f}",
+            "estimated_cost": f"${total_cost:.4f}",
+            "input_cost": f"${input_cost:.4f}",
+            "output_cost": f"${output_cost:.4f}"
+        }
+
     def save_results(self, individuals: IndividualsList, entities: EntitiesList, output_path: str = "output/extracted_data.json"):
         """
-        Save extraction results to a JSON file.
+        Save final combined extraction results. Individual files already saved incrementally.
 
         Args:
             individuals: Extracted individuals data
             entities: Extracted entities data
-            output_path: Path to save the JSON file
+            output_path: Path to save the main JSON file
         """
+        # Ensure output directory exists
+        output_dir = Path(output_path).parent
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        # Save main combined file (for compatibility and final summary)
         output_data = {
             "extractionDate": datetime.now().isoformat(),
             "source": "UK Sanctions List - Cyber Regime",
@@ -351,13 +602,14 @@ class LLMExtractor:
             }
         }
 
-        # Ensure output directory exists
-        Path(output_path).parent.mkdir(parents=True, exist_ok=True)
-
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(output_data, f, indent=2, ensure_ascii=False)
 
-        print(f"Results saved to {output_path}")
+        # Report final file status (individual files already saved incrementally)
+        pipeline_logger.info(f"💾 Final extraction summary:")
+        pipeline_logger.info(f"   • Combined summary: {output_path}")
+        pipeline_logger.info(f"   • Individuals: {self.individuals_output_path} (saved incrementally)")
+        pipeline_logger.info(f"   • Entities: {self.entities_output_path} (saved incrementally)")
 
 
 def process_sanctions_with_llm(text_file_path: str = "output/Cyber_text.txt") -> Tuple[IndividualsList, EntitiesList]:
@@ -371,23 +623,34 @@ def process_sanctions_with_llm(text_file_path: str = "output/Cyber_text.txt") ->
         Tuple of extracted individuals and entities
     """
     # Read the text file
-    print(f"Reading text from {text_file_path}")
+    pipeline_logger.info(f"📄 Reading text from {text_file_path}")
     with open(text_file_path, 'r', encoding='utf-8') as f:
         text = f.read()
+
+    pipeline_logger.info(f"📊 Text file loaded: {len(text):,} characters")
 
     # Initialize extractor
     extractor = LLMExtractor()
 
-    # Extract data
+    # Extract data with progress tracking
     individuals, entities = extractor.extract_all(text)
+
+    # Get cost estimates
+    cost_info = extractor.get_cost_estimate()
 
     # Save results
     extractor.save_results(individuals, entities)
 
+    # Report final API usage and costs
+    pipeline_logger.metrics("💰 OpenAI API Usage & Cost Estimate", cost_info)
+
     # Print summary
-    print("\n=== Extraction Summary ===")
-    print(f"Individuals extracted: {individuals.totalCount}")
-    print(f"Entities extracted: {entities.totalCount}")
+    pipeline_logger.info("")
+    pipeline_logger.info("🎯 Final Extraction Summary:")
+    pipeline_logger.info(f"   • Individuals extracted: {individuals.totalCount}")
+    pipeline_logger.info(f"   • Entities extracted: {entities.totalCount}")
+    pipeline_logger.info(f"   • Total API calls: {cost_info['total_api_calls']}")
+    pipeline_logger.info(f"   • Estimated cost: {cost_info['estimated_cost']}")
 
     return individuals, entities
 
@@ -397,5 +660,5 @@ if __name__ == "__main__":
     try:
         individuals, entities = process_sanctions_with_llm()
     except Exception as e:
-        print(f"Extraction failed: {e}")
+        pipeline_logger.error(f"Extraction failed: {e}")
         exit(1)

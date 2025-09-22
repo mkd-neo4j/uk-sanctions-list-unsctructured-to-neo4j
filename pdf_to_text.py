@@ -8,6 +8,7 @@ import pdfplumber
 import os
 from pathlib import Path
 from typing import Optional
+from logger_config import pipeline_logger
 
 
 def extract_text_from_pdf(pdf_path: str, output_dir: str = "output") -> Optional[str]:
@@ -26,19 +27,19 @@ def extract_text_from_pdf(pdf_path: str, output_dir: str = "output") -> Optional
 
         pdf_file = Path(pdf_path)
         if not pdf_file.exists():
-            print(f"Error: PDF file not found at {pdf_path}")
+            pipeline_logger.error(f"PDF file not found at {pdf_path}")
             return None
 
-        print(f"Processing PDF: {pdf_path}")
+        pipeline_logger.info(f"📄 Processing PDF: {pdf_path}")
 
         extracted_text = []
 
         with pdfplumber.open(pdf_path) as pdf:
             total_pages = len(pdf.pages)
-            print(f"Total pages: {total_pages}")
+            pipeline_logger.info(f"📋 Total pages to process: {total_pages}")
 
             for i, page in enumerate(pdf.pages, 1):
-                print(f"Extracting page {i}/{total_pages}...")
+                pipeline_logger.progress(i, total_pages, "pages", f"Extracting page {i}")
                 text = page.extract_text()
                 if text:
                     extracted_text.append(text)
@@ -52,14 +53,14 @@ def extract_text_from_pdf(pdf_path: str, output_dir: str = "output") -> Optional
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(full_text)
 
-        print(f"Text extracted successfully!")
-        print(f"Saved to: {output_path}")
-        print(f"Total characters extracted: {len(full_text)}")
+        pipeline_logger.info(f"✅ Text extraction successful!")
+        pipeline_logger.info(f"💾 Saved to: {output_path}")
+        pipeline_logger.info(f"📊 Total characters extracted: {len(full_text):,}")
 
         return full_text
 
     except Exception as e:
-        print(f"Error extracting text from PDF: {e}")
+        pipeline_logger.error(f"Error extracting text from PDF: {e}")
         return None
 
 
