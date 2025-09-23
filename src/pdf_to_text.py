@@ -1,19 +1,34 @@
 """
 Step 1: PDF to Text Conversion Module
-This module handles the conversion of PDF files to text format.
-It's the first step in the pipeline for processing UK sanctions data.
+Clean orchestrator for PDF to text conversion using utility functions.
+This is the first step in the pipeline for processing UK sanctions data.
 """
 
-import pdfplumber
-import os
-from pathlib import Path
 from typing import Optional
 from src.logger_config import pipeline_logger
+from src.utils.pdf_processor import (
+    validate_pdf_path,
+    extract_pages_text,
+    format_extracted_text,
+    save_text_file,
+    get_pdf_info
+)
+from src.utils.path_utils import (
+    resolve_pdf_path,
+    create_output_path,
+    get_file_info
+)
 
 
 def extract_text_from_pdf(pdf_path: str, output_dir: str = "output") -> Optional[str]:
     """
     Extract text from a PDF file and save it to a text file.
+
+    Clean orchestrator that coordinates the extraction workflow:
+    1. Validate PDF file
+    2. Extract text from pages
+    3. Format and save results
+    4. Report metrics
 
     Args:
         pdf_path: Path to the input PDF file
@@ -23,44 +38,34 @@ def extract_text_from_pdf(pdf_path: str, output_dir: str = "output") -> Optional
         Extracted text as a string, or None if extraction fails
     """
     try:
-        Path(output_dir).mkdir(parents=True, exist_ok=True)
-
-        pdf_file = Path(pdf_path)
-        if not pdf_file.exists():
-            pipeline_logger.error(f"PDF file not found at {pdf_path}")
+        # Step 1: Validate PDF file
+        if not validate_pdf_path(pdf_path):
             return None
 
-        pipeline_logger.info(f"📄 Processing PDF: {pdf_path}")
+        # Show file info for transparency
+        file_info = get_file_info(pdf_path)
+        pipeline_logger.info(f"📊 PDF file: {file_info['size_mb']} MB, {file_info['name']}")
 
-        extracted_text = []
+        # Step 2: Extract text from pages
+        page_texts = extract_pages_text(pdf_path)
 
-        with pdfplumber.open(pdf_path) as pdf:
-            total_pages = len(pdf.pages)
-            pipeline_logger.info(f"📋 Total pages to process: {total_pages}")
+        if not page_texts:
+            pipeline_logger.warning("No text content extracted from PDF")
+            return None
 
-            for i, page in enumerate(pdf.pages, 1):
-                pipeline_logger.progress(i, total_pages, "pages", f"Extracting page {i}")
-                text = page.extract_text()
-                if text:
-                    extracted_text.append(text)
-                    extracted_text.append(f"\n--- Page {i} ---\n")
+        # Step 3: Format text and prepare output
+        full_text = format_extracted_text(page_texts, include_page_markers=True)
+        output_path = create_output_path(pdf_path, output_dir, "_text", ".txt")
 
-        full_text = "\n".join(extracted_text)
-
-        output_filename = pdf_file.stem + "_text.txt"
-        output_path = Path(output_dir) / output_filename
-
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(full_text)
-
-        pipeline_logger.info(f"✅ Text extraction successful!")
-        pipeline_logger.info(f"💾 Saved to: {output_path}")
-        pipeline_logger.info(f"📊 Total characters extracted: {len(full_text):,}")
-
-        return full_text
+        # Step 4: Save results and report metrics
+        if save_text_file(full_text, output_path):
+            pipeline_logger.info("✅ Text extraction completed successfully!")
+            return full_text
+        else:
+            return None
 
     except Exception as e:
-        pipeline_logger.error(f"Error extracting text from PDF: {e}")
+        pipeline_logger.error(f"PDF extraction workflow failed: {e}")
         return None
 
 
@@ -68,13 +73,21 @@ def process_sanctions_pdf(pdf_filename: str = "Cyber.pdf") -> Optional[str]:
     """
     Process the UK sanctions PDF file specifically.
 
+    Simple entry point for processing sanctions PDFs from the standard directory.
+
     Args:
         pdf_filename: Name of the PDF file in the pdf directory
 
     Returns:
         Extracted text or None if processing fails
     """
-    pdf_path = f"pdf/{pdf_filename}"
+    # Resolve the full path to the PDF file
+    pdf_path = resolve_pdf_path(pdf_filename, base_dir="pdf")
+
+    # Log the processing start
+    pipeline_logger.info(f"🎯 Processing UK sanctions PDF: {pdf_filename}")
+
+    # Process the PDF using the main extraction function
     return extract_text_from_pdf(pdf_path)
 
 
