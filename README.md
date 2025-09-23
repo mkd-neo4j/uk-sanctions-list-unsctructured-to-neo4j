@@ -26,46 +26,64 @@ Transform unstructured UK sanctions PDFs into powerful knowledge graphs using AI
 ## 📁 Project Structure
 
 ```
-uk-sanctions-knowledge-graph/
+uk-sanctions-list-unsctructured-to-neo4j/
 │
 ├── src/                          # Source code
-│   ├── main.py                   # Knowledge graph pipeline orchestrator
+│   ├── main.py                   # Pipeline orchestrator with configurable stages
 │   ├── pdf_to_text.py            # PDF extraction module
 │   ├── llm_extractor.py          # AI-powered entity & relationship extraction
-│   ├── neo4j_connector.py        # Neo4j database integration
-│   ├── graph_builder.py          # Knowledge graph construction
-│   ├── logger_config.py          # Professional logging
-│   └── models/                   # Graph data models
+│   ├── neo4j_loader.py           # Neo4j database integration and loading
+│   ├── logger_config.py          # Professional logging system
+│   ├── models/                   # Pydantic data models
+│   │   ├── __init__.py
+│   │   ├── individual.py         # Individual person data model
+│   │   ├── entity.py             # Organization/entity data model
+│   │   └── address.py            # Address data model
+│   └── utils/                    # Utility modules
 │       ├── __init__.py
-│       ├── nodes/                # Node definitions
-│       │   ├── individual.py     # Individual entity nodes
-│       │   ├── entity.py         # Organization entity nodes
-│       │   └── address.py        # Address nodes
-│       └── relationships/        # Relationship definitions
-│           ├── sanctions.py      # Sanction relationships
-│           └── associations.py   # Entity associations
+│       ├── file_operations.py    # File I/O operations
+│       ├── neo4j_client.py       # Neo4j connection management
+│       ├── neo4j_data_processor.py # Neo4j data processing
+│       ├── openai_client.py      # OpenAI API client
+│       ├── path_utils.py         # Path and directory utilities
+│       ├── pdf_processor.py      # PDF processing utilities
+│       ├── progress_tracker.py   # Progress tracking and logging
+│       └── text_parser.py        # Text parsing utilities
 │
 ├── pdf/                          # Input PDF files
-│   └── Cyber.pdf                 # UK Sanctions List
+│   ├── Cyber.pdf                 # UK Sanctions List document
+│   └── README.md                 # PDF directory documentation
 │
-├── example/                      # Example extraction outputs
-│   └── Cyber_text.txt           # Sample extracted text (87KB, 37 individuals)
+├── example/                      # Example extraction outputs (demo data)
+│   ├── Cyber_text.txt           # Sample extracted text (87KB, 37 individuals)
+│   ├── entities_extracted.json  # Sample entity extraction results
+│   ├── extracted_data.json      # Sample combined extraction data
+│   └── individuals_extracted.json # Sample individual extraction results
 │
 ├── output/                       # Live processing outputs
-│   ├── Cyber_text.txt           # Extracted raw text from PDF
-│   ├── individuals_extracted.json # Structured individual records
-│   ├── entities_extracted.json    # Structured entity records
-│   └── graph_statistics.json    # Neo4j import statistics
+│   ├── Cyber_text.txt           # Current extracted raw text from PDF
+│   ├── entities_extracted.json  # Current structured entity records
+│   ├── extracted_data.json      # Current combined extraction data
+│   └── individuals_extracted.json # Current structured individual records
 │
-├── cypher/                       # Neo4j queries and schemas
-│   ├── schema.cypher            # Graph schema definition
-│   ├── constraints.cypher       # Database constraints
-│   └── sample_queries.cypher    # Example compliance queries
+├── cypher/                       # Neo4j Cypher scripts for data loading
+│   ├── load_entities.cypher      # Load entity records to Neo4j
+│   ├── load_entities_address.cypher # Load entity address relationships
+│   ├── load_entities_aliases.cypher # Load entity alias relationships
+│   ├── load_entities_relationships.cypher # Load entity relationships
+│   ├── load_individuals.cypher   # Load individual records to Neo4j
+│   ├── load_individuals_address.cypher # Load individual address relationships
+│   └── load_individuals_aliases.cypher # Load individual alias relationships
+│
+├── docs/                         # Documentation
+│   ├── NEO4J-DATA-MODEL.md       # Neo4j data model documentation
+│   └── WHY.md                    # Project motivation and background
 │
 ├── .env.example                  # Configuration template
+├── .gitignore                    # Git ignore patterns
+├── CLAUDE.md                     # Claude Code instructions and project info
 ├── requirements.txt              # Python dependencies
-├── WHY.md                       # Project motivation
-└── README.md                    # This file
+└── README.md                     # This file
 ```
 
 ## 🚀 Quick Start
