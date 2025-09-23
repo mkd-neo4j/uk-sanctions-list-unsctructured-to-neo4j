@@ -16,8 +16,9 @@ Transform unstructured UK sanctions PDFs into powerful knowledge graphs using AI
 - **🕸️ Knowledge Graph Creation**: Transform unstructured PDFs into Neo4j graph databases
 - **🤖 AI-Powered Entity Extraction**: Uses OpenAI GPT-4o-mini for intelligent relationship mapping
 - **🔗 Relationship Modeling**: Automatically identifies and models connections between sanctions entities
-- **⚡ Graph Queries**: Enable complex Cypher queries for sophisticated compliance screening
+- **⚡ Configurable Pipeline Stages**: Run individual stages (`pdf`, `llm`, `neo4j`) or combinations for optimized workflows
 - **📊 Network Analysis**: Discover hidden connections and patterns in sanctions data
+- **💰 Cost-Optimized Development**: Skip expensive LLM calls during database iteration cycles
 - **💾 Incremental Graph Building**: Crash-resilient with automatic Neo4j transaction management
 - **🔍 Graph Validation**: Ensures data consistency and relationship integrity
 - **🏢 Enterprise Ready**: Production-grade Neo4j integration for compliance teams
@@ -130,7 +131,69 @@ neo4j start
 ### 5. Run the Knowledge Graph Pipeline
 
 ```bash
-python src/main.py
+# See all available options
+python src/main.py --help
+
+# Run complete pipeline (all stages)
+python src/main.py --stages all
+
+# Run individual stages
+python src/main.py --stages pdf          # Extract text from PDF only
+python src/main.py --stages llm          # AI entity extraction only
+python src/main.py --stages neo4j        # Load existing data to Neo4j only
+
+# Run stage combinations
+python src/main.py --stages pdf,llm      # Extract text and entities
+python src/main.py --stages llm,neo4j    # Extract entities and load to Neo4j
+```
+
+**💡 Development Tip**: After running the complete pipeline once, use `--stages neo4j` for fast iterations during database development - saves time and API costs!
+
+## 🔧 Pipeline Stages
+
+The pipeline supports flexible stage execution for optimized development workflows:
+
+### Available Stages
+
+| Stage | Description | Dependencies | Typical Use |
+|-------|-------------|--------------|-------------|
+| `pdf` | Extract text from PDF documents | None | Initial setup, PDF updates |
+| `llm` | AI-powered entity extraction | `pdf` stage or existing `output/Cyber_text.txt` | Data model changes, re-extraction |
+| `neo4j` | Load data into Neo4j database | `llm` stage or existing JSON files | Database development, schema updates |
+| `all` | Run complete pipeline | None | First run, full refresh |
+
+### Stage Dependencies
+
+The pipeline automatically validates dependencies and provides clear error messages:
+
+```bash
+# ❌ This will fail if text file doesn't exist
+python src/main.py --stages llm
+# Error: LLM stage requires 'output/Cyber_text.txt' (run 'pdf' stage first)
+
+# ✅ This will work - runs pdf first, then llm
+python src/main.py --stages pdf,llm
+```
+
+### Cost & Time Optimization
+
+| Stage | Time | Cost | When to Use |
+|-------|------|------|-------------|
+| `pdf` | ~3 seconds | Free | PDF updates only |
+| `llm` | ~2-5 minutes | ~$0.03 | Entity model changes |
+| `neo4j` | ~15 seconds | Free | Database schema updates |
+| `all` | ~3-6 minutes | ~$0.03 | Initial setup, major changes |
+
+**Development Workflow Example:**
+```bash
+# Initial setup - run everything once
+python src/main.py --stages all
+
+# Database development - fast iterations
+python src/main.py --stages neo4j    # Repeat as needed
+
+# Model updates - when changing entity extraction
+python src/main.py --stages llm,neo4j
 ```
 
 ## 🕸️ Knowledge Graph Output
@@ -293,14 +356,36 @@ Each extracted individual becomes nodes and relationships in Neo4j:
 
 ## 🔬 Technical Details
 
+### Modular Pipeline Architecture
+
+The system is built with a **configurable stage architecture** allowing selective execution:
+
+```
+📄 PDF Stage → 🧠 LLM Stage → 🕸️ Neo4j Stage
+   (3s)         (2-5min)        (15s)
+   Free         ~$0.03          Free
+```
+
+Each stage is **independent** and **resumable**:
+- **PDF Stage**: Converts PDF to structured text, saves to `output/Cyber_text.txt`
+- **LLM Stage**: AI entity extraction, saves to `output/extracted_data.json`
+- **Neo4j Stage**: Graph database loading with relationship modeling
+
 ### Knowledge Graph Construction Process
 
-1. **PDF Processing**: Extracts text while preserving document structure
-2. **AI Entity & Relationship Extraction**: LLM identifies entities and their relationships
-3. **Graph Schema Mapping**: Maps extracted data to Neo4j node and relationship types
+1. **PDF Processing** (`--stages pdf`): Extracts text while preserving document structure
+2. **AI Entity & Relationship Extraction** (`--stages llm`): LLM identifies entities and their relationships
+3. **Graph Schema Mapping** (`--stages neo4j`): Maps extracted data to Neo4j node and relationship types
 4. **Neo4j Transaction Management**: Atomic graph updates with rollback capabilities
 5. **Relationship Inference**: Discovers implicit connections between entities
 6. **Graph Validation**: Ensures referential integrity and constraint compliance
+
+### Stage-Based Development Benefits
+
+- 🚀 **Fast Iterations**: Skip expensive LLM calls during database development
+- 💰 **Cost Control**: Only pay for LLM processing when needed
+- 🔧 **Debugging**: Test individual components in isolation
+- ⚡ **Recovery**: Resume from any failed stage without full pipeline restart
 
 ### Graph Modeling Strategy
 
@@ -317,21 +402,34 @@ Each extracted individual becomes nodes and relationships in Neo4j:
 - Memory-efficient streaming for large datasets
 - Connection pooling and retry logic for reliability
 
-## 🏗️ Unstructured to Knowledge Graph Journey
+## 🏗️ Configurable Knowledge Graph Pipeline
 
-| Step | Status | Description |
-|------|--------|-------------|
-| 1. **Unstructured PDF Input** | ✅ Complete | Raw sanctions document processing |
-| 2. **Text Extraction & Parsing** | ✅ Complete | Convert PDF to structured text |
-| 3. **AI Entity Recognition** | ✅ Complete | LLM identifies individuals, organizations, relationships |
-| 4. **Graph Schema Mapping** | ✅ Complete | Map entities to Neo4j node/relationship types |
-| 5. **Knowledge Graph Creation** | 🚧 In Progress | Build interconnected graph in Neo4j |
-| 6. **Compliance Query Interface** | 🚧 Planned | Advanced Cypher queries for sanctions screening |
-| 7. **Graph Analytics & Visualization** | 🚧 Planned | Network analysis and relationship discovery |
+| Stage | Command | Status | Description |
+|-------|---------|--------|-------------|
+| 1. **PDF Processing** | `--stages pdf` | ✅ Complete | Raw sanctions document processing |
+| 2. **Text Extraction** | `--stages pdf` | ✅ Complete | Convert PDF to structured text |
+| 3. **AI Entity Recognition** | `--stages llm` | ✅ Complete | LLM identifies individuals, organizations, relationships |
+| 4. **Graph Schema Mapping** | `--stages neo4j` | ✅ Complete | Map entities to Neo4j node/relationship types |
+| 5. **Knowledge Graph Creation** | `--stages neo4j` | ✅ Complete | Build interconnected graph in Neo4j |
+| 6. **Compliance Query Interface** | Available | ✅ Complete | Advanced Cypher queries for sanctions screening |
+| 7. **Stage-Based Development** | `--stages <stage>` | ✅ Complete | Modular execution for optimized workflows |
 
-### 🎯 The Complete Transformation
+### 🎯 The Configurable Transformation Pipeline
 ```
-📄 Unstructured PDF → 🧠 AI Processing → 🕸️ Knowledge Graph → ⚡ Intelligent Queries
+📄 PDF Stage (3s) → 🧠 LLM Stage (2-5min) → 🕸️ Neo4j Stage (15s) → ⚡ Intelligent Queries
+      Free              ~$0.03                   Free            Available
+```
+
+**Flexible Execution Examples:**
+```bash
+# Full pipeline (first run)
+python src/main.py --stages all
+
+# Development iteration (database changes only)
+python src/main.py --stages neo4j
+
+# Model updates (re-extract and load)
+python src/main.py --stages llm,neo4j
 ```
 
 **From**: "VLADIMIR VLADIMIROVICH ANANEV, DOB: 03/07/1987, associated with FANCY BEAR..."
