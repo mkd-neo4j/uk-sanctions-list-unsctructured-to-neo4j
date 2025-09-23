@@ -62,9 +62,17 @@ class OpenAIClient:
 
         Address parsing examples:
         - "Moscow, Russia" → postTown: "Moscow", country: "Russia"
+        - "Perm Oblast, Russia" → region: "Perm Oblast", country: "Russia"
+        - "Oeljanovsk, Russia" → postTown: "Oeljanovsk", country: "Russia"
         - "Room 1102, Guanfu Mansion, 46 Xinkai Road, Hedong District, Tianjin, China" →
           addressLine1: "46 Xinkai Road", addressLine2: "Room 1102, Guanfu Mansion",
           postTown: "Tianjin", region: "Hedong District", country: "China"
+
+        CRITICAL: For country extraction, if the location contains a comma-separated format like "Region, Country" or "City, Country":
+        - Extract only the ACTUAL COUNTRY NAME (after the last comma) for the country field
+        - Put regions/oblasts/states in the region field, cities in postTown field
+        - Valid countries include: Russia, China, Iran, North Korea, United Kingdom, United States, Ukraine, etc.
+        - Invalid country values: Perm Oblast, Hedong District, Moscow (these are regions/cities)
 
         Important:
         - This record contains exactly ONE individual
@@ -114,9 +122,17 @@ class OpenAIClient:
 
         Address parsing examples:
         - "22 Kirova Street, Moscow, Russia" → addressLine1: "22 Kirova Street", postTown: "Moscow", country: "Russia"
+        - "Perm Oblast, Russia" → region: "Perm Oblast", country: "Russia"
+        - "Oeljanovsk, Russia" → postTown: "Oeljanovsk", country: "Russia"
         - "2nd Floor, No. 16, Huashiyuan North Road, East Lake New Technology Development Zone, Hubei Province, Wuhan, China" →
           addressLine1: "No. 16, Huashiyuan North Road", addressLine2: "2nd Floor",
           postTown: "Wuhan", region: "East Lake New Technology Development Zone, Hubei Province", country: "China"
+
+        CRITICAL: For country extraction, if the location contains a comma-separated format like "Region, Country" or "City, Country":
+        - Extract only the ACTUAL COUNTRY NAME (after the last comma) for the country field
+        - Put regions/oblasts/states in the region field, cities in postTown field
+        - Valid countries include: Russia, China, Iran, North Korea, United Kingdom, United States, Ukraine, etc.
+        - Invalid country values: Perm Oblast, Hedong District, Moscow (these are regions/cities)
 
         Important:
         - This record contains exactly ONE entity/organization

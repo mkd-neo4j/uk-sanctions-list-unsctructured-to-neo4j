@@ -228,6 +228,15 @@ class Neo4jDataProcessor:
             address_data = self.filter_empty_values(filtered_data['address'])
             if address_data:
                 address_data['addressId'] = self.generate_unique_id('addr')
+                # Validate and clean country field
+                if 'country' in address_data:
+                    validated_country = self.extract_country_from_location(address_data['country'])
+                    if validated_country:
+                        address_data['country'] = validated_country
+                    else:
+                        # Remove invalid country to prevent bad Country nodes
+                        pipeline_logger.warning(f"Removing invalid country value: {address_data['country']}")
+                        address_data.pop('country', None)
                 filtered_data['address'] = address_data
 
         self.processed_individuals += 1
@@ -272,6 +281,15 @@ class Neo4jDataProcessor:
             address_data = self.filter_empty_values(filtered_data['address'])
             if address_data:
                 address_data['addressId'] = self.generate_unique_id('addr')
+                # Validate and clean country field
+                if 'country' in address_data:
+                    validated_country = self.extract_country_from_location(address_data['country'])
+                    if validated_country:
+                        address_data['country'] = validated_country
+                    else:
+                        # Remove invalid country to prevent bad Country nodes
+                        pipeline_logger.warning(f"Removing invalid country value: {address_data['country']}")
+                        address_data.pop('country', None)
                 filtered_data['address'] = address_data
 
         self.processed_entities += 1
@@ -331,6 +349,106 @@ class Neo4jDataProcessor:
             pipeline_logger.error(f"Failed to load entities from {json_file_path}: {e}")
             return []
 
+    @staticmethod
+    def get_valid_countries() -> Dict[str, Dict[str, str]]:
+        """
+        Get comprehensive mapping of valid countries.
+
+        Returns:
+            Dictionary mapping country names/variants to country info
+        """
+        return {
+            'russia': {'code': 'RU', 'name': 'Russia'},
+            'russian federation': {'code': 'RU', 'name': 'Russia'},
+            'russian': {'code': 'RU', 'name': 'Russia'},
+            'china': {'code': 'CN', 'name': 'China'},
+            "people's republic of china": {'code': 'CN', 'name': 'China'},
+            'chinese': {'code': 'CN', 'name': 'China'},
+            'iran': {'code': 'IR', 'name': 'Iran'},
+            'islamic republic of iran': {'code': 'IR', 'name': 'Iran'},
+            'iranian': {'code': 'IR', 'name': 'Iran'},
+            'north korea': {'code': 'KP', 'name': 'North Korea'},
+            'democratic people\'s republic of korea': {'code': 'KP', 'name': 'North Korea'},
+            'dprk': {'code': 'KP', 'name': 'North Korea'},
+            'united kingdom': {'code': 'GB', 'name': 'United Kingdom'},
+            'uk': {'code': 'GB', 'name': 'United Kingdom'},
+            'great britain': {'code': 'GB', 'name': 'United Kingdom'},
+            'britain': {'code': 'GB', 'name': 'United Kingdom'},
+            'united states': {'code': 'US', 'name': 'United States'},
+            'united states of america': {'code': 'US', 'name': 'United States'},
+            'usa': {'code': 'US', 'name': 'United States'},
+            'america': {'code': 'US', 'name': 'United States'},
+            'ukraine': {'code': 'UA', 'name': 'Ukraine'},
+            'kyrgyzstan': {'code': 'KG', 'name': 'Kyrgyzstan'},
+            'kyrgyz republic': {'code': 'KG', 'name': 'Kyrgyzstan'},
+            'kazakhstan': {'code': 'KZ', 'name': 'Kazakhstan'},
+            'republic of kazakhstan': {'code': 'KZ', 'name': 'Kazakhstan'},
+            'belarus': {'code': 'BY', 'name': 'Belarus'},
+            'republic of belarus': {'code': 'BY', 'name': 'Belarus'},
+            'syria': {'code': 'SY', 'name': 'Syria'},
+            'syrian arab republic': {'code': 'SY', 'name': 'Syria'},
+            'myanmar': {'code': 'MM', 'name': 'Myanmar'},
+            'burma': {'code': 'MM', 'name': 'Myanmar'},
+            'venezuela': {'code': 'VE', 'name': 'Venezuela'},
+            'bolivia': {'code': 'BO', 'name': 'Bolivia'},
+            'nicaragua': {'code': 'NI', 'name': 'Nicaragua'},
+            'libya': {'code': 'LY', 'name': 'Libya'},
+            'mali': {'code': 'ML', 'name': 'Mali'},
+            'zimbabwe': {'code': 'ZW', 'name': 'Zimbabwe'},
+            'serbia': {'code': 'RS', 'name': 'Serbia'},
+            'turkey': {'code': 'TR', 'name': 'Turkey'},
+            'turkiye': {'code': 'TR', 'name': 'Turkey'},
+            'afghanistan': {'code': 'AF', 'name': 'Afghanistan'},
+            'lebanon': {'code': 'LB', 'name': 'Lebanon'},
+            'iraq': {'code': 'IQ', 'name': 'Iraq'},
+            'somalia': {'code': 'SO', 'name': 'Somalia'},
+            'sudan': {'code': 'SD', 'name': 'Sudan'},
+            'yemen': {'code': 'YE', 'name': 'Yemen'},
+            'cuba': {'code': 'CU', 'name': 'Cuba'},
+            'moldova': {'code': 'MD', 'name': 'Moldova'},
+            'georgia': {'code': 'GE', 'name': 'Georgia'},
+            'armenia': {'code': 'AM', 'name': 'Armenia'},
+            'azerbaijan': {'code': 'AZ', 'name': 'Azerbaijan'},
+            'uzbekistan': {'code': 'UZ', 'name': 'Uzbekistan'},
+            'tajikistan': {'code': 'TJ', 'name': 'Tajikistan'},
+            'turkmenistan': {'code': 'TM', 'name': 'Turkmenistan'}
+        }
+
+    @staticmethod
+    def extract_country_from_location(location_string: str) -> Optional[str]:
+        """
+        Extract country name from location string, handling comma-separated formats.
+
+        Args:
+            location_string: Location string that may contain region, city, country
+
+        Returns:
+            Valid country name or None if no valid country found
+        """
+        if not location_string or Neo4jDataProcessor.is_empty_value(location_string):
+            return None
+
+        # Get valid countries mapping
+        valid_countries = Neo4jDataProcessor.get_valid_countries()
+
+        # Clean the input
+        cleaned = location_string.strip().lower()
+
+        # If it contains commas, try extracting country from the last part
+        if ',' in cleaned:
+            parts = [part.strip() for part in cleaned.split(',')]
+            # Try the last part first (most likely to be country)
+            for part in reversed(parts):
+                if part in valid_countries:
+                    return valid_countries[part]['name']
+
+        # If no commas or comma-based extraction failed, check the whole string
+        if cleaned in valid_countries:
+            return valid_countries[cleaned]['name']
+
+        # No valid country found
+        return None
+
     def extract_country_from_nationality(self, nationality: str) -> Optional[Dict[str, str]]:
         """
         Extract country information from nationality string.
@@ -344,26 +462,9 @@ class Neo4jDataProcessor:
         if not nationality or self.is_empty_value(nationality):
             return None
 
-        # Simple country mapping (could be enhanced with comprehensive country database)
-        country_mapping = {
-            'russia': {'code': 'RU', 'name': 'Russia'},
-            'russian': {'code': 'RU', 'name': 'Russia'},
-            'china': {'code': 'CN', 'name': 'China'},
-            'chinese': {'code': 'CN', 'name': 'China'},
-            'iran': {'code': 'IR', 'name': 'Iran'},
-            'iranian': {'code': 'IR', 'name': 'Iran'},
-            'north korea': {'code': 'KP', 'name': 'North Korea'},
-            'united kingdom': {'code': 'GB', 'name': 'United Kingdom'},
-            'uk': {'code': 'GB', 'name': 'United Kingdom'},
-            'united states': {'code': 'US', 'name': 'United States'},
-            'usa': {'code': 'US', 'name': 'United States'},
-            'ukraine': {'code': 'UA', 'name': 'Ukraine'},
-            'kyrgyzstan': {'code': 'KG', 'name': 'Kyrgyzstan'},
-            'kazakhstan': {'code': 'KZ', 'name': 'Kazakhstan'}
-        }
-
+        valid_countries = self.get_valid_countries()
         normalized_nationality = nationality.lower().strip()
-        return country_mapping.get(normalized_nationality)
+        return valid_countries.get(normalized_nationality)
 
     def get_processing_stats(self) -> Dict[str, int]:
         """
