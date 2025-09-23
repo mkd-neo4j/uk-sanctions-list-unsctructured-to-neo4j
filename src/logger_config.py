@@ -148,6 +148,10 @@ class PipelineLogger:
         """Log an error message."""
         self.logger.error(message)
 
+    def debug(self, message: str):
+        """Log a debug message."""
+        self.logger.debug(message)
+
     def _create_progress_bar(self, percentage: float, width: int = 20) -> str:
         """Create a visual progress bar."""
         filled = int(width * percentage / 100)

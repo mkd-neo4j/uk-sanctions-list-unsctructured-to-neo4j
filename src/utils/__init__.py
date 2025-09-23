@@ -21,6 +21,8 @@ from .path_utils import (
     get_file_info,
     create_output_path
 )
+from .neo4j_client import Neo4jClient
+from .neo4j_data_processor import Neo4jDataProcessor
 
 __all__ = [
     # Text processing
@@ -50,5 +52,9 @@ __all__ = [
     'resolve_pdf_path',
     'validate_file_path',
     'get_file_info',
-    'create_output_path'
+    'create_output_path',
+
+    # Neo4j utilities
+    'Neo4jClient',
+    'Neo4jDataProcessor'
 ]
