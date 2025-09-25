@@ -5,6 +5,7 @@ Handles data transformation, validation, and filtering for sanctions data.
 
 import json
 import uuid
+import hashlib
 from typing import Dict, Any, List, Optional, Union
 from datetime import datetime
 import re
@@ -189,6 +190,47 @@ class Neo4jDataProcessor:
         unique_id = str(uuid.uuid4())
         return f"{prefix}_{unique_id}" if prefix else unique_id
 
+    @staticmethod
+    def generate_deterministic_address_id(address_data: Dict[str, Any]) -> str:
+        """
+        Generate a deterministic address ID based on address content.
+        This ensures identical addresses get the same ID for deduplication.
+
+        Args:
+            address_data: Dictionary containing address fields
+
+        Returns:
+            Deterministic address ID string
+        """
+        # Create a normalized string from address components
+        # Use only the meaningful fields that define address uniqueness
+        components = []
+
+        # Add address lines in order
+        for field in ['addressLine1', 'addressLine2', 'postTown', 'postCode', 'region', 'country']:
+            value = address_data.get(field, '')
+            if value and not Neo4jDataProcessor.is_empty_value(value):
+                # Normalize the value (lowercase, strip whitespace)
+                normalized = str(value).strip().lower()
+                # Remove extra spaces
+                normalized = re.sub(r'\s+', ' ', normalized)
+                components.append(normalized)
+
+        # If we have raw address but no parsed components, use raw address
+        if not components and 'rawAddress' in address_data:
+            raw = str(address_data['rawAddress']).strip().lower()
+            raw = re.sub(r'\s+', ' ', raw)
+            components.append(raw)
+
+        # Create hash from normalized components
+        if components:
+            content_string = '|'.join(components)
+            hash_object = hashlib.sha256(content_string.encode('utf-8'))
+            return f"addr_{hash_object.hexdigest()[:16]}"  # Use first 16 chars of hash
+        else:
+            # Fallback to UUID if no meaningful content
+            return f"addr_{str(uuid.uuid4())}"
+
     def process_individual(self, individual_data: Dict[str, Any]) -> Dict[str, Any]:
         """
         Process individual sanctions data for Neo4j loading.
@@ -227,8 +269,7 @@ class Neo4jDataProcessor:
         if 'address' in filtered_data and filtered_data['address']:
             address_data = self.filter_empty_values(filtered_data['address'])
             if address_data:
-                address_data['addressId'] = self.generate_unique_id('addr')
-                # Validate and clean country field
+                # Validate and clean country field BEFORE generating ID
                 if 'country' in address_data:
                     validated_country = self.extract_country_from_location(address_data['country'])
                     if validated_country:
@@ -237,6 +278,8 @@ class Neo4jDataProcessor:
                         # Remove invalid country to prevent bad Country nodes
                         pipeline_logger.warning(f"Removing invalid country value: {address_data['country']}")
                         address_data.pop('country', None)
+                # Generate deterministic ID based on normalized address content
+                address_data['addressId'] = self.generate_deterministic_address_id(address_data)
                 filtered_data['address'] = address_data
 
         self.processed_individuals += 1
@@ -280,8 +323,7 @@ class Neo4jDataProcessor:
         if 'address' in filtered_data and filtered_data['address']:
             address_data = self.filter_empty_values(filtered_data['address'])
             if address_data:
-                address_data['addressId'] = self.generate_unique_id('addr')
-                # Validate and clean country field
+                # Validate and clean country field BEFORE generating ID
                 if 'country' in address_data:
                     validated_country = self.extract_country_from_location(address_data['country'])
                     if validated_country:
@@ -290,6 +332,8 @@ class Neo4jDataProcessor:
                         # Remove invalid country to prevent bad Country nodes
                         pipeline_logger.warning(f"Removing invalid country value: {address_data['country']}")
                         address_data.pop('country', None)
+                # Generate deterministic ID based on normalized address content
+                address_data['addressId'] = self.generate_deterministic_address_id(address_data)
                 filtered_data['address'] = address_data
 
         self.processed_entities += 1

@@ -152,6 +152,7 @@ class Neo4jClient:
             "CREATE CONSTRAINT unique_org_sanction_id IF NOT EXISTS FOR (o:Organisation) REQUIRE o.sanctionId IS UNIQUE",
             "CREATE CONSTRAINT unique_country_code IF NOT EXISTS FOR (c:Country) REQUIRE c.code IS UNIQUE",
             "CREATE CONSTRAINT unique_alias_key IF NOT EXISTS FOR (a:Alias) REQUIRE a.aliasId IS UNIQUE",
+            "CREATE CONSTRAINT unique_address_id IF NOT EXISTS FOR (addr:Address) REQUIRE addr.addressId IS UNIQUE",
 
             # Performance indices
             "CREATE INDEX person_fullname IF NOT EXISTS FOR (p:Person) ON (p.fullName)",
@@ -160,6 +161,8 @@ class Neo4jClient:
             "CREATE INDEX person_listed_date IF NOT EXISTS FOR (p:Person) ON (p.listedOn)",
             "CREATE INDEX country_name IF NOT EXISTS FOR (c:Country) ON (c.name)",
             "CREATE INDEX alias_key IF NOT EXISTS FOR (a:Alias) ON (a.aliasId)",
+            "CREATE INDEX address_id IF NOT EXISTS FOR (addr:Address) ON (addr.addressId)",
+            "CREATE INDEX address_postcode IF NOT EXISTS FOR (addr:Address) ON (addr.postCode)",
 
             # Full-text search indices
             "CREATE FULLTEXT INDEX person_name_search IF NOT EXISTS FOR (p:Person) ON EACH [p.fullName, p.firstName, p.lastName]",
