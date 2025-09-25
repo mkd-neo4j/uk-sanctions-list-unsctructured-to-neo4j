@@ -242,30 +242,32 @@ python src/main.py --stages llm,neo4j
 [10:15:32]     associated with FANCY BEAR, passport 766211028..."
 
 [10:15:32] 🕸️ KNOWLEDGE GRAPH NODES & RELATIONSHIPS:
-[10:15:32]    (:Individual {name: "VLADIMIR VLADIMIROVICH ANANEV"})
-[10:15:32]    (:Organization {name: "FANCY BEAR"})
+[10:15:32]    (:Person:SanctionedIndividual {fullName: "VLADIMIR VLADIMIROVICH ANANEV"})
+[10:15:32]    (:SanctionsRegime:CyberSanctions {regimeName: "UK Cyber Sanctions"})
 [10:15:32]    (:Country {name: "Russia"})
+[10:15:32]    (:Country {name: "Kyrgyzstan"})
 [10:15:32]
 [10:15:32]    Relationships created:
-[10:15:32]    • (Individual)-[:SANCTIONED_BY]->(UKGovernment)
-[10:15:32]    • (Individual)-[:ASSOCIATED_WITH]->(Organization)
-[10:15:32]    • (Individual)-[:CITIZEN_OF]->(Country)
+[10:15:32]    • (Person)-[:SANCTIONED_UNDER]->(SanctionsRegime)
+[10:15:32]    • (Person)-[:HAS_NATIONALITY]->(Russia)
+[10:15:32]    • (Person)-[:BORN_IN]->(Kyrgyzstan)
 [10:15:32] ============================================================
 ```
 
 ### Final Knowledge Graph Metrics:
 ```
 [10:16:45] 📈 Graph Construction Completed:
-[10:16:45]    • Nodes created: 125 (70 Individuals + 9 Organizations + 46 Countries/Addresses)
-[10:16:45]    • Relationships created: 387
-[10:16:45]    • Graph density: 82%
-[10:16:45]    • Processing time: 3.2 minutes
+[10:16:45]    • Nodes created: 98 (75 Individuals + 9 Organizations + 14 Countries)
+[10:16:45]    • Relationships created: 405
+[10:16:45]    • Total Person nodes: 75
+[10:16:45]    • Total Organisation nodes: 9
+[10:16:45]    • Processing time: 12.5 seconds
 
 [10:16:46] 🕸️ Neo4j Database Statistics:
-[10:16:46]    • Database: sanctions
-[10:16:46]    • Node labels: Individual, Organization, Country, Address, Document
-[10:16:46]    • Relationship types: SANCTIONED_BY, ASSOCIATED_WITH, CITIZEN_OF, LOCATED_IN
-[10:16:46]    • Constraints applied: 8 uniqueness constraints
+[10:16:46]    • Database: neo4j
+[10:16:46]    • Node labels: Person, SanctionedIndividual, Organisation, SanctionedEntity, Country, SanctionsRegime
+[10:16:46]    • Relationship types: SANCTIONED_UNDER, HAS_NATIONALITY, BORN_IN, LISTED_ON, IMPLEMENTS
+[10:16:46]    • Constraints applied: 12 uniqueness constraints
 [10:16:46]    • Indexes created: 12 performance indexes
 
 [10:16:50] 💰 OpenAI API Usage & Cost Estimate:
@@ -277,49 +279,337 @@ python src/main.py --stages llm,neo4j
 
 ## 🕸️ Neo4j Knowledge Graph Queries
 
+### Database Schema Overview
+```cypher
+// View the database schema
+CALL db.schema.visualization()
+
+// Show node labels and counts
+MATCH (n)
+RETURN labels(n) as labels, count(n) as count
+ORDER BY count DESC
+```
+
 ### 1. Find All Sanctioned Individuals from Russia
 ```cypher
-MATCH (person:Individual)-[:CITIZEN_OF]->(country:Country {name: "Russia"})
-WHERE person.sanctioned = true
-RETURN person.name, person.dateOfBirth, person.sanctionId
-ORDER BY person.name
+MATCH path = (person:Person:SanctionedIndividual)-[:HAS_NATIONALITY]->(country:Country {name: "Russia"})
+RETURN path
 ```
 
-### 2. Discover Network Connections
+### 2. Explore Sanctions Regime Structure
 ```cypher
-MATCH (person:Individual)-[r:ASSOCIATED_WITH]->(org:Organization)
-WHERE person.name CONTAINS "ANANEV"
-RETURN person, r, org
+MATCH path = (person:Person:SanctionedIndividual)-[:SANCTIONED_UNDER]->(regime:SanctionsRegime)
+RETURN path
 ```
 
-### 3. Complex Compliance Query - Find Connected Sanctioned Entities
+### 3. Find Individuals by Sanctions Reference
 ```cypher
-MATCH path = (start:Individual)-[:ASSOCIATED_WITH*1..3]-(connected)
-WHERE start.sanctionId = "CYB0071-16753"
-AND connected:Individual OR connected:Organization
-RETURN path, length(path) as degrees_of_separation
-ORDER BY degrees_of_separation
+MATCH (person:Person:SanctionedIndividual)
+WHERE person.fullName CONTAINS "ANANEV"
+RETURN person.fullName, person.sanctionId, person.nationality,
+       person.dateOfBirth, person.placeOfBirth
 ```
 
-### 4. Address-Based Risk Analysis
+### 4. Organizations and Their Entity Types
 ```cypher
-MATCH (person:Individual)-[:LOCATED_IN]->(addr:Address)<-[:LOCATED_IN]-(other:Individual)
-WHERE person <> other
-AND person.sanctioned = true
-RETURN addr.full_address,
-       collect(person.name) as sanctioned_individuals,
-       collect(other.name) as potentially_connected_individuals
+MATCH (org:Organisation:SanctionedEntity)
+RETURN org.organisationName, org.entityType, org.typeOfEntity,
+       org.parentCompany, org.sanctionId
+ORDER BY org.entityType, org.organisationName
 ```
 
-### 5. Export Data for External Systems
+### 5. Birth Country vs Nationality Analysis
 ```cypher
-// Export sanctioned individuals with all relationships
-CALL apoc.export.json.query(
-  "MATCH (i:Individual {sanctioned: true})
-   OPTIONAL MATCH (i)-[r]->(connected)
-   RETURN i, collect({rel: type(r), node: connected}) as connections",
-  "sanctions_export.json"
-)
+MATCH (person:Person:SanctionedIndividual)
+OPTIONAL MATCH (person)-[:HAS_NATIONALITY]->(nationality:Country)
+OPTIONAL MATCH (person)-[:BORN_IN]->(birthCountry:Country)
+WHERE nationality.name <> birthCountry.name
+RETURN person.fullName, nationality.name as nationality,
+       birthCountry.name as birth_country, person.placeOfBirth
+```
+
+### 6. Sanctions List Relationships
+```cypher
+MATCH (person:Person:SanctionedIndividual)-[:LISTED_ON]->(list:SanctionsList)-[:IMPLEMENTS]->(regime:SanctionsRegime)
+RETURN list.listName, list.fileName, regime.regimeName,
+       count(person) as individuals_count
+```
+
+### 7. Find Organizations by Country (Address-based)
+```cypher
+MATCH (org:Organisation:SanctionedEntity)
+WHERE org.organisationName IS NOT NULL
+RETURN org.organisationName, org.entityType, org.parentCompany
+ORDER BY org.organisationName
+```
+
+## 🔍 Advanced Graph Analysis Queries
+
+These queries demonstrate the unique power of graph databases for complex relationship analysis in sanctions compliance:
+
+### 1. Multi-Hop Organizational Network Discovery
+```cypher
+// Find complete corporate hierarchies and hidden connections
+MATCH path = (root:Organisation:SanctionedEntity)-[:PARENT_OF*1..5]->(subsidiary)
+WHERE NOT ()-[:PARENT_OF]->(root) // Start from top-level parents
+RETURN
+    root.organisationName as root_company,
+    root.entityType as root_type,
+    length(path) as hierarchy_depth,
+    collect(nodes(path)) as corporate_chain,
+    subsidiary.organisationName as end_subsidiary
+ORDER BY hierarchy_depth DESC, root_company
+```
+
+### 2. Cross-Entity Alias Network Analysis
+```cypher
+// Find potential identity overlaps through alias analysis
+MATCH (person:Person:SanctionedIndividual)-[:ALSO_KNOWN_AS]->(alias:Alias)
+WITH alias.aliasName as alias_name, collect(person) as persons_with_alias
+WHERE size(persons_with_alias) > 1
+RETURN
+    alias_name,
+    [p IN persons_with_alias | p.fullName] as individuals_sharing_alias,
+    [p IN persons_with_alias | p.nationality] as nationalities,
+    size(persons_with_alias) as alias_frequency
+ORDER BY alias_frequency DESC
+```
+
+### 3. Sanctions Timing Pattern Analysis
+```cypher
+// Identify sanction waves and coordinated designations
+MATCH (entity)-[:SANCTIONED_UNDER]->(regime:SanctionsRegime)
+WHERE entity.listedOn IS NOT NULL
+WITH date(entity.listedOn) as designation_date, collect(entity) as entities_on_date
+WHERE size(entities_on_date) > 1 // Multiple entities sanctioned same day
+RETURN
+    designation_date,
+    size(entities_on_date) as entities_count,
+    [e IN entities_on_date | CASE
+        WHEN e:Person THEN e.fullName
+        WHEN e:Organisation THEN e.organisationName
+    END] as entities_sanctioned_together
+ORDER BY designation_date DESC, entities_count DESC
+```
+
+### 4. Geographic Risk Clustering
+```cypher
+// Find geographic clustering of sanctioned entities and addresses
+MATCH (person:Person:SanctionedIndividual)
+OPTIONAL MATCH (person)-[:HAS_NATIONALITY]->(nationality:Country)
+OPTIONAL MATCH (person)-[:BORN_IN]->(birthCountry:Country)
+OPTIONAL MATCH (person)-[:HAS_ADDRESS]->(address:Address)-[:LOCATED_IN]->(addressCountry:Country)
+WITH nationality.name as nat_country, birthCountry.name as birth_country,
+     addressCountry.name as addr_country, collect(person.fullName) as individuals
+WHERE size(individuals) >= 2
+RETURN
+    coalesce(nat_country, birth_country, addr_country) as country,
+    size(individuals) as individual_count,
+    individuals[0..5] as sample_individuals // Show first 5
+ORDER BY individual_count DESC
+```
+
+### 5. Entity Type Network Analysis
+```cypher
+// Map relationships across different entity types (cyber threat ecosystem)
+MATCH (org:Organisation:SanctionedEntity)
+OPTIONAL MATCH (org)-[:RELATED_TO]->(related:Organisation)
+OPTIONAL MATCH (org)-[:PARENT_OF]->(subsidiary:Organisation)
+WITH org, collect(DISTINCT related) as related_orgs, collect(DISTINCT subsidiary) as subsidiaries
+RETURN
+    org.organisationName,
+    org.entityType,
+    org.parentCompany,
+    size(related_orgs) as related_entities_count,
+    size(subsidiaries) as subsidiary_count,
+    [r IN related_orgs | r.organisationName][0..3] as sample_related_entities
+ORDER BY (size(related_orgs) + size(subsidiaries)) DESC
+```
+
+### 6. Cyber Threat Actor Ecosystem Mapping
+```cypher
+// Map the complete cyber threat landscape and actor relationships
+MATCH (military:Organisation:SanctionedEntity {entityType: 'MILITARY'})
+OPTIONAL MATCH (military)-[:RELATED_TO]->(related:Organisation)
+OPTIONAL MATCH (military)-[:PARENT_OF]->(unit:Organisation)
+OPTIONAL MATCH (military)<-[:PARENT_OF]-(parent:Organisation)
+RETURN
+    military.organisationName as military_unit,
+    military.parentCompany,
+    collect(DISTINCT related.organisationName) as related_organizations,
+    collect(DISTINCT unit.organisationName) as sub_units,
+    collect(DISTINCT parent.organisationName) as parent_organizations,
+    size(apoc.coll.union(
+        collect(DISTINCT related.organisationName),
+        collect(DISTINCT unit.organisationName)
+    )) as total_network_size
+ORDER BY total_network_size DESC
+```
+
+### 9. Time-Series Sanctions Evolution
+```cypher
+// Track how sanctions networks evolved over time
+MATCH (entity)-[:SANCTIONED_UNDER]->(regime:SanctionsRegime)
+WHERE entity.listedOn IS NOT NULL
+WITH date(entity.listedOn) as list_date, entity, regime
+ORDER BY list_date
+WITH list_date,
+     collect({
+         name: CASE WHEN entity:Person THEN entity.fullName ELSE entity.organisationName END,
+         type: CASE WHEN entity:Person THEN 'Individual' ELSE 'Organisation' END,
+         entityType: CASE WHEN entity:Organisation THEN entity.entityType ELSE null END
+     }) as entities_added
+RETURN
+    list_date,
+    size(entities_added) as entities_count,
+    size([e IN entities_added WHERE e.type = 'Individual']) as individuals_added,
+    size([e IN entities_added WHERE e.type = 'Organisation']) as organisations_added,
+    entities_added
+ORDER BY list_date
+```
+
+### 10. Graph Centrality Analysis (Requires APOC)
+```cypher
+// Find the most connected and influential nodes in the sanctions network
+CALL gds.pageRank.stream('sanctions_graph')
+YIELD nodeId, score
+WITH gds.util.asNode(nodeId) as entity, score
+WHERE entity:Person OR entity:Organisation
+RETURN
+    CASE WHEN entity:Person THEN entity.fullName
+         ELSE entity.organisationName END as entity_name,
+    labels(entity) as entity_type,
+    round(score * 1000) / 1000 as influence_score
+ORDER BY influence_score DESC
+LIMIT 20
+```
+
+## 🕸️ Graph Shape & Path Visualization Queries
+
+These queries return complete paths and subgraphs to visualize the actual shape and structure of the sanctions network:
+
+### 1. Complete Individual Network Subgraph
+```cypher
+// Return the complete network around a specific individual
+MATCH (center:Person:SanctionedIndividual {fullName: "VLADIMIR VLADIMIROVICH ANANEV"})
+OPTIONAL MATCH path1 = (center)-[*1..2]-(connected)
+WHERE connected:Person OR connected:Organisation OR connected:Country OR connected:SanctionsRegime
+RETURN center, path1
+LIMIT 50
+```
+
+### 2. Corporate Hierarchy Tree Visualization
+```cypher
+// Visualize complete corporate hierarchies as tree structures
+MATCH (root:Organisation:SanctionedEntity)
+WHERE NOT ()-[:PARENT_OF]->(root) // Top-level parent
+OPTIONAL MATCH tree_path = (root)-[:PARENT_OF*0..5]->(descendant:Organisation)
+OPTIONAL MATCH related_path = (descendant)-[:RELATED_TO]-(related:Organisation)
+RETURN root, tree_path, related_path
+```
+
+### 3. Country-Based Network Clusters
+```cypher
+// Show network clusters organized by country relationships
+MATCH (country:Country {name: "Russia"})
+OPTIONAL MATCH nationality_path = (country)<-[:HAS_NATIONALITY]-(person:Person)-[*1..2]-(connected)
+OPTIONAL MATCH birth_path = (country)<-[:BORN_IN]-(person2:Person)-[*1..2]-(connected2)
+WHERE connected:Person OR connected:Organisation OR connected:SanctionsRegime
+RETURN country, nationality_path, birth_path
+```
+
+### 4. Sanctions Regime Network Map
+```cypher
+// Visualize the complete sanctions regime structure and connections
+MATCH (regime:SanctionsRegime:CyberSanctions)
+OPTIONAL MATCH regime_path = (regime)<-[:SANCTIONED_UNDER]-(entity)-[*1..3]-(connected)
+OPTIONAL MATCH list_path = (regime)<-[:IMPLEMENTS]-(list:SanctionsList)-[:LISTED_ON]-(listed_entity)
+WHERE connected:Person OR connected:Organisation OR connected:Country
+RETURN regime, regime_path, list_path
+```
+
+### 5. Military Unit Network Constellation
+```cypher
+// Map the complete military cyber unit ecosystem
+MATCH (military:Organisation:SanctionedEntity {entityType: 'MILITARY'})
+OPTIONAL MATCH military_tree = (military)-[:PARENT_OF*0..3]-(unit:Organisation)
+OPTIONAL MATCH related_network = (military)-[:RELATED_TO*1..2]-(related)
+OPTIONAL MATCH personnel_path = (military)-[*1..3]-(person:Person)
+RETURN military, military_tree, related_network, personnel_path
+```
+
+### 6. Multi-Generational Corporate Network
+```cypher
+// Trace corporate relationships across multiple generations
+MATCH (org:Organisation:SanctionedEntity)
+WHERE org.parentCompany IS NOT NULL
+OPTIONAL MATCH parent_chain = (org)<-[:PARENT_OF*1..4]-(ancestor:Organisation)
+OPTIONAL MATCH subsidiary_tree = (org)-[:PARENT_OF*1..4]->(descendant:Organisation)
+OPTIONAL MATCH sibling_network = (org)<-[:PARENT_OF]-(parent)-[:PARENT_OF]->(sibling:Organisation)
+WHERE sibling <> org
+RETURN org, parent_chain, subsidiary_tree, sibling_network
+```
+
+### 8. Geographic Relationship Constellation
+```cypher
+// Map geographic relationships and cross-border connections
+MATCH (person:Person:SanctionedIndividual)
+WHERE person.nationality IS NOT NULL AND person.placeOfBirth IS NOT NULL
+OPTIONAL MATCH nationality_path = (person)-[:HAS_NATIONALITY]->(nat_country:Country)
+OPTIONAL MATCH birth_path = (person)-[:BORN_IN]->(birth_country:Country)
+OPTIONAL MATCH address_path = (person)-[:HAS_ADDRESS]->(address:Address)-[:LOCATED_IN]->(addr_country:Country)
+OPTIONAL MATCH same_nationality = (nat_country)<-[:HAS_NATIONALITY]-(compatriot:Person)
+WHERE compatriot <> person
+RETURN person, nationality_path, birth_path, address_path, same_nationality
+LIMIT 80
+```
+
+### 9. Sanctions Timeline Flow Visualization
+```cypher
+// Show how sanctions evolved over time with visual flow
+MATCH (entity)-[:SANCTIONED_UNDER]->(regime:SanctionsRegime)
+WHERE entity.listedOn IS NOT NULL
+WITH date(entity.listedOn) as sanction_date, entity, regime
+ORDER BY sanction_date
+WITH sanction_date, collect(entity)[0..5] as sample_entities // Limit for visualization
+UNWIND sample_entities as entity
+OPTIONAL MATCH timeline_path = (entity)-[*1..2]-(connected)
+WHERE connected:Person OR connected:Organisation OR connected:Country
+RETURN entity, timeline_path, sanction_date
+ORDER BY sanction_date
+LIMIT 100
+```
+
+### 11. Cross-Entity Type Network Web
+```cypher
+// Visualize connections across different entity types
+MATCH (business:Organisation:SanctionedEntity {entityType: 'BUSINESS'})
+OPTIONAL MATCH business_to_military = (business)-[*1..3]-(military:Organisation {entityType: 'MILITARY'})
+OPTIONAL MATCH business_to_govt = (business)-[*1..3]-(govt:Organisation {entityType: 'GOVERNMENT'})
+OPTIONAL MATCH business_to_person = (business)-[*1..2]-(person:Person)
+RETURN business, business_to_military, business_to_govt, business_to_person
+```
+
+### 14. Sanctions Web Radiating Pattern
+```cypher
+// Show radiating patterns from central sanctions regime
+MATCH (regime:SanctionsRegime)
+OPTIONAL MATCH wave1 = (regime)<-[:SANCTIONED_UNDER]-(direct_entities)
+OPTIONAL MATCH wave2 = (direct_entities)-[*1]-(second_degree)
+OPTIONAL MATCH wave3 = (second_degree)-[*1]-(third_degree)
+WHERE second_degree:Person OR second_degree:Organisation OR second_degree:Country
+  AND third_degree:Person OR third_degree:Organisation OR third_degree:Country
+RETURN regime, wave1, wave2, wave3
+```
+
+### 15. Complete Network Subgraph by Group
+```cypher
+// Extract complete subgraphs for specific sanction groups
+MATCH (entity {groupId: "16753"}) // ANANEV's group
+OPTIONAL MATCH group_network = (entity)-[*0..3]-(connected)
+WHERE connected:Person OR connected:Organisation OR connected:Country OR
+      connected:SanctionsRegime OR connected:Address OR connected:Alias
+RETURN group_network
 ```
 
 ## 📁 Example Outputs & Demonstrations
@@ -365,11 +655,11 @@ involved person through his role in and association with ZSERVERS...
 ### 🕸️ Graph Model Preview
 Each extracted individual becomes nodes and relationships in Neo4j:
 ```cypher
-(:Individual {name: "VLADIMIR VLADIMIROVICH ANANEV"})
-    -[:SANCTIONED_BY]->(:Government {name: "UK"})
-    -[:CITIZEN_OF]->(:Country {name: "Russia"})
-    -[:ASSOCIATED_WITH]->(:Organization {name: "ZSERVERS"})
-    -[:HAS_ALIAS]->(:Alias {name: "DARKON"})
+(:Person:SanctionedIndividual {fullName: "VLADIMIR VLADIMIROVICH ANANEV"})
+    -[:SANCTIONED_UNDER]->(:SanctionsRegime:CyberSanctions {regimeName: "UK Cyber Sanctions"})
+    -[:HAS_NATIONALITY]->(:Country {name: "Russia"})
+    -[:BORN_IN]->(:Country {name: "Kyrgyzstan"})
+    -[:LISTED_ON]->(:SanctionsList {listName: "UK Cyber Sanctions List"})
 ```
 
 ## 🔬 Technical Details
@@ -407,11 +697,24 @@ Each stage is **independent** and **resumable**:
 
 ### Graph Modeling Strategy
 
-- **Nodes**: Individual, Organization, Country, Address, Document, Sanction
-- **Relationships**: SANCTIONED_BY, ASSOCIATED_WITH, CITIZEN_OF, LOCATED_IN, ALIASES_OF
-- **Properties**: Comprehensive metadata for compliance queries and analytics
-- **Constraints**: Uniqueness constraints on critical identifiers (passport, sanction ID)
-- **Indexes**: Performance indexes on frequently queried properties
+- **Node Labels**:
+  - `Person:SanctionedIndividual` - Sanctioned individuals
+  - `Organisation:SanctionedEntity` - Sanctioned organizations
+  - `Country` - Countries for nationality/birth places
+  - `Address` - Physical addresses
+  - `SanctionsRegime:CyberSanctions` - UK Cyber sanctions regime
+  - `SanctionsList` - Sanctions list documents
+
+- **Relationships**:
+  - `SANCTIONED_UNDER` - Connects individuals/entities to sanctions regime
+  - `HAS_NATIONALITY` - Person to nationality country
+  - `BORN_IN` - Person to birth country
+  - `LISTED_ON` - Connects to specific sanctions list
+  - `IMPLEMENTS` - Connects sanctions list to regime
+
+- **Properties**: Comprehensive metadata including sanctionId, dates, reasons
+- **Constraints**: Uniqueness on sanctionId, regimeId, listId
+- **Indexes**: Performance indexes on fullName, organisationName, dates
 
 ### Neo4j Performance Optimization
 
@@ -453,9 +756,10 @@ python src/main.py --stages llm,neo4j
 **From**: "VLADIMIR VLADIMIROVICH ANANEV, DOB: 03/07/1987, associated with FANCY BEAR..."
 
 **To**: A queryable graph where you can ask:
-- "Who are all the Russian nationals connected to cyber organizations?"
-- "What is the shortest path between two sanctioned entities?"
-- "Which addresses have multiple sanctioned individuals?"
+- "Who are all the Russian nationals under cyber sanctions?"
+- "Which individuals were born in different countries than their nationality?"
+- "What sanctions regimes are these entities connected to?"
+- "Show me all organizations and their parent companies?"
 
 ## 🤝 Contributing
 
